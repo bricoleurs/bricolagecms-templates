@@ -8,6 +8,7 @@ Revision history for bricolage.cc Templates & Elements
         "Introspection", from the archives.
       - Fixed various parameter passing bugs in the RSS and Mason Archive
         templates.
+      - Fixed bug in handling of keywords in "story_list.mc".
 
 1.10  2004-08-19T23:45:53
       - Added trailing slash to the "Changelog" link in the

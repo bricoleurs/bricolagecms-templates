@@ -171,7 +171,7 @@ USA.
 
 =cut
 
-</%doc>
+</%doc>\
 <%args>
 $max            => 10
 @related_subs   => ()
@@ -183,7 +183,7 @@ $until          => undef
 $story_cats     => undef
 $subcats        => undef
 $all_subcats    => undef
-</%args>
+</%args>\
 <%init>;
 my $count = 0;
 # Are there subelements to the current element that have related stories to
@@ -202,7 +202,8 @@ $exclude{$_} = 1 for @exclude_ids, $story->get_id;
 
 # Get any keywords to search by.
 my @keywords = $which_keywords
-  ? $m->comp('/util/keyword_list.mc', which => $which_keywords)
+  ? map { $_->get_name }
+    $m->comp('/util/keyword_list.mc', which => $which_keywords)
   : ();
 
 # Assemble the parameters.
@@ -288,4 +289,4 @@ $#relateds = $max - $count - 1 if @relateds > $max - $count;
 
 # Return 'em!
 return wantarray ? @relateds : \@relateds;
-</%init>
+</%init>\
