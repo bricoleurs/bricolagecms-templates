@@ -28,6 +28,9 @@
 my $title = $story->get_primary_uri eq '/'
   ? 'Welcome to Bricolage.cc'
   : 'Bricolage -- ' . $story->get_title;
+# Convert <q> tags in title.
+$title =~ s|</q>|&#x201d;|g
+  if $title =~ s|<q>|&#x201c;|g;
 # Naive stripping of tags from the title for the title tag.
 $title =~ s|</?[^>]+>||g;
 </%init>\
