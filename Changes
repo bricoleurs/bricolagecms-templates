@@ -1,6 +1,8 @@
 Revision history for bricolage.cc Templates & Elements
 ======================================================
 
+1.21
+
 1.20  2005-01-10T23:38:25
       - Modified the archive lookup template to look up only article documents
         associated with the "Bricolage Developers" source. This is to exclude
