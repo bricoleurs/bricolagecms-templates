@@ -29,8 +29,11 @@
 % for my $doc (@docs) {
 %     my $url = 'http://www.bricolage.cc' . $doc->get_primary_uri . '/';
 %     my $elem = $doc->get_element;
-%     # Damn RSS readers don't recognize XHTML in the title.
-%     (my $title = $doc->get_title) =~ s|</?[^>]+>||g;
+%     my $title = $doc->get_title;
+%     # Damn RSS readers don't recognize XHTML in the title. Convert <q> and
+%     # strip out other tags.
+%     $title =~ s|</q>|&#x201d;|g if $title =~ s|<q>|&#x201c;|g;
+%     $title =~ s|</?[^>]+>||g;
   <item rdf:about="<% $url %>">
     <title><% escape_html $title %></title>
     <link><% $url %></link>
