@@ -1,5 +1,5 @@
-bricolage.cc Templates & Elements 1.1
-=====================================
+bricolage.cc Templates & Elements 1.11
+======================================
 
 This package contains all of the templates and element definitions (in XML,
 exported from the Bricolage SOAP server) for the bricolage.cc Web site. It's
