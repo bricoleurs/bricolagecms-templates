@@ -21,6 +21,10 @@ Revision history for bricolage.cc Templates & Elements
       - Converting <q> tags in titles to Unicode entities for use in the
         <title> tag in order to preserve quoting.
       - Added "title" field to the "List" element.
+      - Articles will now always trigger the republication of relevant
+        archives every time they're published, instead of just the first time.
+      - Archives will no longer be published with an empty list when more than
+        one is published in a single request.
 
 1.10  2004-08-19T23:45:53
       - Added trailing slash to the "Changelog" link in the

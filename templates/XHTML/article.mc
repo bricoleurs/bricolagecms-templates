@@ -10,10 +10,11 @@
           </div>
 % $m->comp('/util/xhtml/output_body.mc', %ARGS);
 <%cleanup>;
-return unless $burner->get_mode == PUBLISH_MODE
-  && not $story->get_publish_status;
-$story->set_publish_status(1);
-$story->save;
+return unless $burner->get_mode == PUBLISH_MODE;
+unless ($story->get_publish_status) {
+    $story->set_publish_status(1);
+    $story->save;
+}
 
 # We need to look up all the archives in /archive, the current category, and
 # the parent categories of the current category.

@@ -38,6 +38,10 @@ if (@articles >= $limit) {
     $burner->notes(last_offset => $offset + $limit);
     $burner->set_burn_again(1);
     $next = $burner->next_page_file;
+} else {
+    # Reset the offset so that any other archives published by the same
+    # request won't be broken.
+    $burner->notes(last_offset => 0);
 }
 </%init>\
 <%method .rss>
