@@ -1,0 +1,40 @@
+bricolage.cc Templates & Elements 1.1
+=====================================
+
+This package contains all of the templates and element definitions (in XML,
+exported from the Bricolage SOAP server) for the bricolage.cc Web site. It's
+not meant for direct import into an existing Bricolage server, although it is
+possible to peform such a direct import by modifying the Bricolage server and
+the "elements.xml" file. To do so, you must set up the following output
+channels (or modify "elements.xml" to a similar model):
+
+Output Channel     Includes
+-----------------  ---------------
+Library
+XHTML              Library
+Archive            XHTML, Library
+RSS                Library
+Mason              Library
+
+You will also need to modify the site tag in elements.xml. Consult the
+Bricolage Website and documentation for details.
+
+  http://www.bricolage.cc/
+
+Copyright & License
+-------------------
+Copyright (c) 2004 by David Wheeler & Kineticode. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation, version 2.1 of the License.
+
+This library is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+details.
+
+You should have received a copy of the GNU Lesser General Public License along
+with this library (see the the license.txt file); if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
