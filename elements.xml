@@ -508,7 +508,7 @@ right,Right
  <element id="1038">
   <key_name>archive</key_name>
   <name>Archive</name>
-  <description>Archive of all stories on the site.</description>
+  <description>Archive of all stories on the site or in a category and all of its subcategories.</description>
   <burner>Mason</burner>
   <type>Fixed Document</type>
   <active>1</active>
@@ -518,6 +518,7 @@ right,Right
   </sites>
   <output_channels>
    <output_channel site="bricolage.cc">Archive</output_channel>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">Mason</output_channel>
    <output_channel site="bricolage.cc">RSS</output_channel>
   </output_channels>
@@ -536,6 +537,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -581,6 +583,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -600,6 +603,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -646,6 +650,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -665,6 +670,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -737,6 +743,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -816,6 +823,7 @@ right,Right
    <site primary_oc="Mason">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">Mason</output_channel>
   </output_channels>
   <subelements>
@@ -1226,6 +1234,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -1283,6 +1292,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -1374,6 +1384,7 @@ right,Right
    <site primary_oc="XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -1437,6 +1448,7 @@ right,Right
    <site primary_oc="Slugged XHTML">bricolage.cc</site>
   </sites>
   <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
    <output_channel site="bricolage.cc">Slugged XHTML</output_channel>
   </output_channels>
   <subelements>
@@ -1664,6 +1676,34 @@ right,Right
     <options>left,Left
 right,Right
 </options>
+   </field>
+  </fields>
+ </element>
+ <element id="1071">
+  <key_name>document_models</key_name>
+  <name>Document Models</name>
+  <description>For the creation of a list of document models.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
    </field>
   </fields>
  </element>
