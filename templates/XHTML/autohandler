@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">@import url("/ui/css/screen.css");</style>
+    <title><% $title %></title>
+    <& /util/xhtml/meta_keywords.mc &>
+    <script type="text/javascript" src="/ui/js/lib.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="bricolage.cc RSS Feed" href="/archive/rss.xml" />
+<& SELF:.rss &>\
+    <meta name="generator" content="Bricolage <% Bric->VERSION %>" />
+  </head>
+  <body class="withsidebar">
+    <div id="all">
+<% "<& /ui/ssi/header.cmp &>\\" %>
+      <div id="columns">
+        <div id="body">
+          <h1><% $story->get_title %></h1>
+% $burner->chain_next(%ARGS);
+        </div>
+<& /util/xhtml/sidebar.mc &>
+      </div>
+<% "<& /ui/ssi/nav/mason.cmp &>\\" %>
+<% "<& /ui/ssi/footer.cmp &>\\" %>
+    </div>
+  </body>
+</html>
+<%init>;
+my $title = $story->get_primary_uri eq '/'
+  ? 'Welcome to Bricolage.cc'
+  : 'Bricolage - ' . $story->get_title;
+</%init>\
+<%method .rss>
+% return;
+</%method>\
+<%filter>;
+s/([\s\n])'/$1&#x2018;/g; # Make opening single quotation marks.
+s/'/&#x2019;/g;           # Make proper apostrophes and closing single quotation marks.
+s/(?<!\<\!)--(?!>)/&#x2014;/g; # Make proper m-dashes, but allow comments.
+</%filter>\
+<%doc>
+
+=pod
+
+=head1 Name
+
+/autohandler - Root category template for bricolage.cc XHTML output
+
+=head1 Author
+
+David Wheeler <david@kineticode.com>
+
+=head1 Copyright & License
+
+Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation, version 2.1 of the License.
+
+This library is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+details.
+
+You should have received a copy of the GNU Lesser General Public License along
+with this library (see the the license.txt file); if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
+
+=cut
+
+</%doc>\
