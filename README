@@ -12,9 +12,11 @@ Output Channel     Includes
 -----------------  ---------------
 Library
 XHTML              Library
+Slugged XHATML     XHTML, Library
 Archive            XHTML, Library
 RSS                Library
 Mason              Library
+Introspect         Library
 
 You will also need to modify the site tag in elements.xml. Consult the
 Bricolage Website and documentation for details.
