@@ -1,0 +1,24 @@
+Revision history for bricolage.cc Templates & Elements
+======================================================
+
+1.01  2004-08-19T23:45:53
+      - Added trailing slash to the "Changelog" link in the
+        link_to_download.mc XHTML template.
+      - Fixed Article XHTML template to properly republish the Archive when it
+        is published.
+      - The title of each page is now stripped of XHTML before being used
+        in the title tag in the header.
+      - The title tag now uses an m-dash between the name of the site and the
+        name of the page.
+      - Error messages thrown by templates now get the name of the element
+        from the element object and display the proper element number.
+      - RSS feeds now have XHTML stripped from the title of each article,
+        since most RSS newsreaders can't seem to tell that it's XHTML.
+      - Added Introspection output channel and templates.
+      - Added "Document Models" document type.
+      - Added "Download Shortcut" subelement to the "Changes" document, so
+        that there can be a clear link to the download descibed by the
+        changes.
+
+1.00  2004-07-28T20:13:54
+      - Initial public release.
