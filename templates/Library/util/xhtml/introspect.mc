@@ -6,7 +6,7 @@ introspect.mc - Outputs a graphical representation of a story type element tree
 
 =head1 Version
 
-1.0
+1.1
 
 =head1 Synopsis
 
@@ -53,6 +53,13 @@ value. Defaults to true.
 Pass a false value to this parameter to prevent the template from outputting
 its default CSS. True by default.
 
+=item include_summary
+
+  $m->comp('/util/xhtml/introspect.mc', include_summary => 0);
+
+Pass a false value to this parameter to prevent the template from outtputing a
+nested list summary of all of the elements in the document model.
+
 =head1 Prerequisites
 
 =over 4
@@ -95,22 +102,39 @@ USA.
 % }
 % if ($include_css) {
     <style type="text/css">
-.element {
+#docmodel {
   font: verdana, arial, sans-serif;
+}
+
+#docmodel .summary ul {
+  margin: 0;
+}
+
+#docmodel h2 {
+  margin-bottom: .5em;
+}
+
+#docmodel .element {
   border-top: 1px solid black;
   border-left: 1px solid black;
 }
 
-.element h1 { font-size: 1.4em; margin: 0; }
-.element h2 { font-size: 1.2em; margin: .5em 0 .2em 0; }
+#docmodel .element h1 { font-size: 1.4em; margin: 0; }
+#docmodel .element h2 { font-size: 1.2em; margin: .5em 0 .2em 0; }
 
-.element table {
+#docmodel .element table {
   border-spacing: 0;
   border-left: 1px solid black;
   border-top: 1px solid black;
 }
 
-.element, .fields tr, .fields td, .fields th, .sites tr, .sites td, .sites th {
+#docmodel .element,
+#docmodel .fields tr,
+#docmodel .fields td,
+#docmodel .fields th,
+#docmodel .sites tr,
+#docmodel .sites td,
+#docmodel .sites th {
   border-bottom: 1px solid black;
   border-right: 1px solid black;
   margin: 0;
@@ -118,50 +142,50 @@ USA.
   vertical-align: top;
 }
 
-.fields { width: 100%; }
+#docmodel .fields { width: 100%; }
 
-.element {
+#docmodel .element {
   padding: 1em;
   margin-bottom: 1em;
 }
 
-.element dt {
+#docmodel .element dt {
   font-weight: bold;
   float: left;
   padding-right: .5em;
 }
 
-.element td ul {
+#docmodel .element td ul {
   list-style: square;
   margin: 0 0 0 1.5em;
   padding: 0;
 }
 
-.sites td ul {
+#docmodel .sites td ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li.primary {
+#docmodel li.primary {
   font-weight: bold;
 }
 
-li.primary:after { content: " \2714"; }
-.element dt:after { content: ":" }
+#docmodel li.primary:after { content: " \2714"; }
+#docmodel .element dt:after { content: ":" }
 
 /* Colors */
-.level1  { background: #fbfbd8; }
-.level2  { background: #eed2ee; }
-.level3  { background: #add8e6; }
-.level4  { background: #e1f5ba; }
-.level5  { background: #ffe4e1; }
-.level5  { background: #7fffd4; }
-.level6  { background: #ffec8b; }
-.level7  { background: #ffc1c1; }
-.level8  { background: #87ceeb; }
-.level9  { background: #deb887; }
-.level10 { background: #ff6347; }
+#docmodel .level1  { background: #fbfbd8; }
+#docmodel .level2  { background: #eed2ee; }
+#docmodel .level3  { background: #add8e6; }
+#docmodel .level4  { background: #e1f5ba; }
+#docmodel .level5  { background: #ffe4e1; }
+#docmodel .level5  { background: #7fffd4; }
+#docmodel .level6  { background: #ffec8b; }
+#docmodel .level7  { background: #ffc1c1; }
+#docmodel .level8  { background: #87ceeb; }
+#docmodel .level9  { background: #deb887; }
+#docmodel .level10 { background: #ff6347; }
     </style>
 % }
 % if ($full_page) {
@@ -170,22 +194,63 @@ li.primary:after { content: " \2714"; }
   </head>
   <body>
 % }
-% $m->comp('.element', elem => $element->get_element);
+    <div id="docmodel">
+% my $elem = $element->get_element;
+% if ($include_summary) {
+      <div class="summary">
+        <h2>Element Summary</h2>
+        <ul class="elemsummary">
+%     $m->comp('.summary', elem => $elem);
+        </ul>
+      </div>
+%     %seen = ();
+% }
+      <h2>Docment Model</h2>
+% $m->comp('.element', elem => $elem);
+    </div>
 % if ($full_page) {
   </body>
 </html>
 % }
 <%args>
-$include_css => 1
-$full_page   => 1
-</%args>
+$include_css    => 1
+$full_page      => 1
+$include_summary => 1
+</%args>\
 <%once>;
 my $meta = 'html_info';
 </%once>\
 <%shared>
 my %seen;
 </%shared>\
-<%def .element>
+<%def .summary>\
+<%args>
+$elem
+$no_nest => 0
+$level   => 1
+</%args>\
+<%perl>;
+my $kn = $elem->get_key_name;
+$seen{$kn}++;
+$m->print('        <li>', $elem->get_name, "</li>\n");
+my @subs = $elem->get_containers or return;
+my $kn1 = $subs[0]->get_key_name;
+return if $seen{$kn} > 1 || (@subs == 1 && $no_nest && $kn1 eq $kn);
+$m->print(qq{        <ul class="elemsummary">\n});
+for my $sub (@subs) {
+    my $subkn = $sub->get_key_name;
+    my $nest = $subkn eq $kn;
+    next if $seen{$subkn} > 1 || ($nest && $no_nest);
+    $m->comp('.summary',
+        elem => $sub,
+        level   => $level + 1,
+        no_nest => $nest
+    );
+}
+$m->print(qq{        </ul>\n});
+</%perl>\
+</%def>
+<%def .element>\
 <%args>
 $elem
 $level   => 1
