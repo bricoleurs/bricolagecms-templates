@@ -11,6 +11,7 @@ for my $ans ($element->get_elements(qw(answer_paragraph answer_code list block_q
         $m->print("              <p>", $ans->get_data, "</p>\n");
     } elsif ($kn eq 'answer_code') {
         (my $code = escape_html($ans->get_data)) =~ s/'/&#x0027;/g;
+         $code =~ s/-/&#x002d;/g;
         $m->print("              <pre><%text>$code</%text></pre>\n");
     } else {
         $burner->display_element($ans);

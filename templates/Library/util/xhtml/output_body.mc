@@ -9,6 +9,7 @@ foreach my $e ( $element->get_elements(@elems)) {
         $m->print('          <h3>', $e->get_data, "</h3>\n");
     } elsif ($kn eq 'code') {
         (my $code = escape_html($e->get_data)) =~ s/'/&#x0027;/g;
+         $code =~ s/-/&#x002d;/g;
         $m->print("          <pre><%text>$code</%text></pre>\n");
     } else {
         $burner->display_element($e);

@@ -6,7 +6,7 @@ $cat = undef if $cat eq '/archive';
 for my $art ($m->comp('/util/archive_list.mc', category => $cat)) {
     my $elem = $art->get_element;
     $m->comp('/util/xhtml/output_link.mc',
-             url => $burner->best_uri($art)->as_string . '/',
+             url  => $burner->best_uri($art)->as_string . '/',
              text => $art->get_title,
              teas => scalar $elem->get_data('teaser')
                      || scalar $elem->get_data('paragraph'),
