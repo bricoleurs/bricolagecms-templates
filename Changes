@@ -2,6 +2,12 @@ Revision history for bricolage.cc Templates & Elements
 ======================================================
 
 1.11
+      - Modified the archive lookup template to look up only article documents
+        associated with the "Bricolage Developers" source. This is to exclude
+        the "Article Document Model" document, which is sourced to
+        "Introspection", from the archives.
+      - Fixed various parameter passing bugs in the RSS and Mason Archive
+        templates.
 
 1.10  2004-08-19T23:45:53
       - Added trailing slash to the "Changelog" link in the

@@ -3,6 +3,9 @@ $limit    => 5
 $offset   => 0
 $category => undef
 </%args>
+<%once>;
+my $developers_source_id = 1;
+</%once>\
 <%init>;
 return Bric::Biz::Asset::Business::Story->list({
     element_key_name => 'article',
@@ -11,6 +14,7 @@ return Bric::Biz::Asset::Business::Story->list({
     Offset           => $offset,
     Limit            => $limit,
     unexired         => 1,
+    source_id        => $developers_source_id, # Exclude Introspection.
     # Limit to a category?
     ( defined $category
       ? (category_uri => "$category%")

@@ -34,7 +34,7 @@
   <item rdf:about="<% $url %>">
     <title><% escape_html $title %></title>
     <link><% $url %></link>
-    <description><% escape_html $elem->get_data('long_teaser') || $elem->get_data('teaser') || $elem->get_data('paragraph') %></description>
+    <description><% escape_html(scalar $elem->get_data('long_teaser') || scalar $elem->get_data('teaser') || scalar $elem->get_data('paragraph')) %></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
     <dc:date><% $doc->get_cover_date('%Y-%m-%dT%H:%M:%S%z') %></dc:date>
   </item>
