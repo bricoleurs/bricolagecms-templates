@@ -6,9 +6,7 @@
     <style type="text/css">@import url("/ui/css/screen.css");</style>
     <title><% $title %></title>
     <& /util/xhtml/meta_keywords.mc &>
-    <script type="text/javascript" src="/ui/js/lib.js"></script>
-    <link rel="alternate" type="application/rss+xml" title="bricolage.cc RSS Feed" href="/archive/rss.xml" />
-<& SELF:.rss &>\
+    <script type="text/javascript" src="/ui/js/lib.js"></script><& SELF:.rss &>\
     <meta name="generator" content="Bricolage <% Bric->VERSION %>" />
   </head>
   <body class="withsidebar">
@@ -32,7 +30,7 @@ my $title = $story->get_primary_uri eq '/'
   : 'Bricolage - ' . $story->get_title;
 </%init>\
 <%method .rss>
-% return;
+    <link rel="alternate" type="application/rss+xml" title="bricolage.cc RSS Feed" href="/archive/rss.xml" />
 </%method>\
 <%filter>;
 s/([\s\n])'/$1&#x2018;/g; # Make opening single quotation marks.

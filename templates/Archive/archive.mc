@@ -41,8 +41,6 @@ if (@articles >= $limit) {
 }
 </%init>\
 <%method .rss>
-% # Skip the main archive, since it is always included.
-% return if $burner->get_cat->get_uri eq '/archive';
 % # Find the RSS output channel and output the link.
 % my ($oc) = Bric::Biz::OutputChannel->list({ name => 'RSS', site_id => $story->get_site_id });
     <link rel="alternate" type="application/rss+xml" title="bricolage.cc <% escape_html($story->get_title) %> RSS Feed" href="<% $story->get_uri(undef, $oc) . '/rss.xml' %>" />
