@@ -16,6 +16,7 @@
       <div id="columns">
         <div id="body">
           <h1><% $story->get_title %></h1>
+          <p><% $story->get_description || $story->get_element->get_element->get_description %></p>
 % $m->comp('.more');
 % $m->comp('/util/xhtml/introspect.mc', full_page => 0);
 % $m->comp('.more');
@@ -34,6 +35,19 @@ my $title = $story->get_primary_uri eq '/'
 # Naive stripping of tags from the title for the title tag.
 $title =~ s|</?[^>]+>||g;
 </%init>\
+<%cleanup>;
+return unless $burner->get_mode == PUBLISH_MODE
+  && not $story->get_publish_status;
+# Republish the "Document Models" document.
+my ($dm) = Bric::Biz::Asset::Business::Story->list({
+    element_key_name => 'document_models',
+    primary_uri      => '/about/doc_models',
+    Limit            => 1,
+    unexpired        => 1,
+});
+return unless $dm;
+$burner->publish_another($dm);
+</%cleanup>\
 <%filter>;
 s/([\s\n])'/$1&#x2018;/g; # Make opening single quotation marks.
 s/'/&#x2019;/g;           # Make proper apostrophes and closing single quotation marks.
