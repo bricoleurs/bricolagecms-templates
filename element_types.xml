@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assets xmlns="http://bricolage.sourceforge.net/assets.xsd">
+ <element_type id="1">
+  <name>Document</name>
+  <description>Document stories.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="2">
+  <name>Image</name>
+  <description>Images</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>1</media>
+  <biz_class>Bric::Biz::Asset::Business::Media::Image</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="3">
+  <name>Subelement</name>
+  <description>General Subelements.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="4">
+  <name>Related Story</name>
+  <description>Related story elements.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>1</related_story>
+  <related_media>0</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="5">
+  <name>Page</name>
+  <description>Page elements.</description>
+  <top_level>0</top_level>
+  <paginated>1</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="6">
+  <name>Related Media</name>
+  <description>Related Media Elements</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="7">
+  <name>Fixed Document</name>
+  <description>Fixed documents.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>1</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="1024">
+  <name>Fixed Image</name>
+  <description>Fixed images.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>1</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>1</media>
+  <biz_class>Bric::Biz::Asset::Business::Media::Image</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="1025">
+  <name>Audio</name>
+  <description>Audio files.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>1</media>
+  <biz_class>Bric::Biz::Asset::Business::Media::Audio</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="1026">
+  <name>Other Media</name>
+  <description>Other media files.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>1</media>
+  <biz_class>Bric::Biz::Asset::Business::Media</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="1027">
+  <name>Fixed Files</name>
+  <description>CSS, JS, SSIs, etc.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_url>1</fixed_url>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <media>1</media>
+  <biz_class>Bric::Biz::Asset::Business::Media</biz_class>
+  <active>1</active>
+ </element_type>
+ <element_type id="1028">
+  <name>Related Media and Story</name>
+  <description>Elements that relate to a media document and to a story document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_url>0</fixed_url>
+  <related_story>1</related_story>
+  <related_media>1</related_media>
+  <media>0</media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+ </element_type>
+</assets>

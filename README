@@ -31,8 +31,9 @@ You must also set up the following Element Types:
   * Fixed Files
   * Audio
 
-In a future version of Bricolage, XML will be included for the Element Types,
-as well.
+Or, if you've installed Bricolage from "trunk" branch of thethe Subversion
+repository, you can simply use the element_types.xml file to create the element
+types.
 
 And finally, You will need to modify the site tag in elements.xml. Consult the
 Bricolage Website and documentation for details.
