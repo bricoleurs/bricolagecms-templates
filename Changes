@@ -16,6 +16,9 @@ Revision history for bricolage.cc Templates & Elements
         since most RSS newsreaders can't seem to tell that it's XHTML.
       - Added Introspection output channel and templates.
       - Added "Document Models" document type.
+      - Added "Download Shortcut" subelement to the "Changes" document, so
+        that there can be a clear link to the download descibed by the
+        changes.
 
 1.00  2004-07-28T20:13:54
       - Initial public release.

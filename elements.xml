@@ -1452,6 +1452,7 @@ right,Right
    <output_channel site="bricolage.cc">Slugged XHTML</output_channel>
   </output_channels>
   <subelements>
+   <subelement>download_shortcut</subelement>
    <subelement>list</subelement>
   </subelements>
   <fields>
