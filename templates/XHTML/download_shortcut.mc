@@ -9,7 +9,7 @@ my $tip = escape_html($element->get_data('tooltip'));
 my $uri = $burner->best_uri($download)->as_string;
 my $text = $element->get_data('link_text') || $download->get_title;
 my $desc = $element->get_data('description');
-$desc = defined $desc ? " ($desc)" : '';
+$desc = defined $desc && $desc ne '' ? " ($desc)" : '';
 $m->print(qq{              <dd><a href="$uri" title="$tip">$text</a>$desc</dd>\n});
 return;
 </%init>\
