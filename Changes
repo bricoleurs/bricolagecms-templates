@@ -25,6 +25,7 @@ Revision history for bricolage.cc Templates & Elements
         archives every time they're published, instead of just the first time.
       - Archives will no longer be published with an empty list when more than
         one is published in a single request.
+      - Added the list of required Element Types to be created to the README.
 
 1.10  2004-08-19T23:45:53
       - Added trailing slash to the "Changelog" link in the

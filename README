@@ -18,7 +18,23 @@ RSS                Library
 Mason              Library
 Introspect         Library
 
-You will also need to modify the site tag in elements.xml. Consult the
+You must also set up the following Element Types:
+
+  * Subelement
+  * Related Story
+  * Related Media and Story
+  * Related Media
+  * Fixed Document
+  * Document
+  * Image
+  * Fixed Image
+  * Fixed Files
+  * Audio
+
+In a future version of Bricolage, XML will be included for the Element Types,
+as well.
+
+And finally, You will need to modify the site tag in elements.xml. Consult the
 Bricolage Website and documentation for details.
 
   http://www.bricolage.cc/
