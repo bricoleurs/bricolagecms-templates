@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <style type="text/css">@import url("/ui/css/screen.css");</style>
-    <style type="text/css">@import url("/ui/css/introspect.css");</style>
+    <style type="text/css">@import url("/ui/css/docmodel.css");</style>
     <title><% $title %></title>
     <& /util/xhtml/meta_keywords.mc &>
     <script type="text/javascript" src="/ui/js/lib.js"></script>
@@ -54,7 +54,7 @@ $burner->publish_another($dm);
 s/([\s\n])'/$1&#x2018;/g; # Make opening single quotation marks.
 s/'/&#x2019;/g;           # Make proper apostrophes and closing single quotation marks.
 s/(?<!\<\!)--(?!>)/&#x2014;/g; # Make proper m-dashes, but allow comments.
-</%filter>\
+</%filter>
 <%doc>
 
 =pod
@@ -87,4 +87,4 @@ USA.
 
 =cut
 
-</%doc>\
+</%doc>

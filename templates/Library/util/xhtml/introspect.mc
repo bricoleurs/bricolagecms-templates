@@ -53,12 +53,12 @@ value. Defaults to true.
 Pass a false value to this parameter to prevent the template from outputting
 its default CSS. True by default.
 
-=item include_summary
+=item include_toc
 
-  $m->comp('/util/xhtml/introspect.mc', include_summary => 0);
+  $m->comp('/util/xhtml/introspect.mc', include_toc => 0);
 
 Pass a false value to this parameter to prevent the template from outtputing a
-nested list summary of all of the elements in the document model.
+nested table of contents of all of the elements in the document model.
 
 =head1 Prerequisites
 
@@ -106,7 +106,7 @@ USA.
   font: verdana, arial, sans-serif;
 }
 
-#docmodel .summary ul {
+#docmodel .toc ul {
   margin: 0;
 }
 
@@ -196,11 +196,11 @@ USA.
 % }
     <div id="docmodel">
 % my $elem = $element->get_element;
-% if ($include_summary) {
-      <div class="summary">
-        <h2>Element Summary</h2>
-        <ul class="elemsummary">
-%     $m->comp('.summary', elem => $elem);
+% if ($include_toc) {
+      <div class="toc">
+        <h2>Element Table of Contents</h2>
+        <ul>
+%     $m->comp('.toc', elem => $elem);
         </ul>
       </div>
 %     %seen = ();
@@ -213,9 +213,9 @@ USA.
 </html>
 % }
 <%args>
-$include_css    => 1
-$full_page      => 1
-$include_summary => 1
+$include_css => 1
+$full_page   => 1
+$include_toc => 1
 </%args>\
 <%once>;
 my $meta = 'html_info';
@@ -223,7 +223,7 @@ my $meta = 'html_info';
 <%shared>
 my %seen;
 </%shared>\
-<%def .summary>\
+<%def .toc>\
 <%args>
 $elem
 $no_nest => 0
@@ -232,24 +232,28 @@ $level   => 1
 <%perl>;
 my $kn = $elem->get_key_name;
 $seen{$kn}++;
-$m->print('        <li>', $elem->get_name, "</li>\n");
-my @subs = $elem->get_containers or return;
+$m->print(qq{        <li><a href="#$kn$level">}, $elem->get_name, "</a>");
+my @subs = $elem->get_containers
+ or $m->print("</li>\n"), return;
 my $kn1 = $subs[0]->get_key_name;
-return if $seen{$kn} > 1 || (@subs == 1 && $no_nest && $kn1 eq $kn);
-$m->print(qq{        <ul class="elemsummary">\n});
+if ($seen{$kn} > 1 || (@subs == 1 && $no_nest && $kn1 eq $kn)) {
+    $m->print("</li>\n");
+    return;
+}
+$m->print(qq{\n        <ul>\n});
 for my $sub (@subs) {
     my $subkn = $sub->get_key_name;
     my $nest = $subkn eq $kn;
     next if $seen{$subkn} > 1 || ($nest && $no_nest);
-    $m->comp('.summary',
+    $m->comp('.toc',
         elem => $sub,
         level   => $level + 1,
         no_nest => $nest
     );
 }
-$m->print(qq{        </ul>\n});
+$m->print(qq{          </ul>\n        </li>\n});
 </%perl>\
-</%def>
+</%def>\
 <%def .element>\
 <%args>
 $elem
@@ -259,7 +263,7 @@ $no_nest => 0
 % my $kn = $elem->get_key_name;
 % $seen{$kn}++;
 % my @keys = qw(type value length size);
-    <div class="element level<% $level %>">
+    <div class="element level<% $level %>" id="<% $kn . $level %>">
       <h1><% $elem->get_name %></h1>
       <dl>
         <dt>Key Name</dt>
