@@ -36,7 +36,7 @@ foreach my $e ( $element->get_elements(qw(item paragraph code list
     }
 }
 $m->print("</li>\n") if $in_item;
-</%perl>
+</%perl>\
           </<% $tag %>>
 <%doc>
 

@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <style type="text/css">@import url("/ui/css/screen.css");</style>
-    <title><% $clean_title %></title>
+    <title><% $title %></title>
     <& /util/xhtml/meta_keywords.mc &>
     <script type="text/javascript" src="/ui/js/lib.js"></script><& SELF:.rss &>\
     <meta name="generator" content="Bricolage <% Bric->VERSION %>" />
@@ -29,7 +29,7 @@ my $title = $story->get_primary_uri eq '/'
   ? 'Welcome to Bricolage.cc'
   : 'Bricolage -- ' . $story->get_title;
 # Naive stripping of tags from the title for the title tag.
-(my $clean_title = $title) =~ s|</?[^>]+>||g;
+$title =~ s|</?[^>]+>||g;
 </%init>\
 <%method .rss>
     <link rel="alternate" type="application/rss+xml" title="bricolage.cc RSS Feed" href="/archive/rss.xml" />
