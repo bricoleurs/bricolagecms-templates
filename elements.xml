@@ -817,13 +817,6 @@ right,Right
     <rows>4</rows>
     <cols>40</cols>
    </field>
-   <field>
-    <type>date</type>
-    <key_name>pub_date</key_name>
-    <label>Publish Date</label>
-    <required>1</required>
-    <repeatable>0</repeatable>
-   </field>
   </fields>
  </element>
  <element id="1045">
