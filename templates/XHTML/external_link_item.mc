@@ -4,7 +4,8 @@ my $title = $element->get_data('link_text');
 unless ($url && $title) {
     return if $burner->get_mode == PUBLISH_MODE;
     $burner->throw_error("You forgot to specify a URL and/or title for "
-                         . "External Link Item # " . $element->get_place);
+                         . 'element #' . $element->get_place + 1 . ', '
+                         . $element->get_name);
 }
 my $tip = escape_html($element->get_data('tooltip')) || '';
 my $desc = $element->get_data('description');

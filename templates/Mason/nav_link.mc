@@ -2,9 +2,10 @@
 my $class = $burner->notes('first_nav') ? '' : ' class="first"';
 my $rel_story = $element->get_related_story;
 unless ($rel_story) {
-  return if $burner->get_mode == PUBLISH_MODE;
-  $burner->throw_error("You forgot to relate a document for "
-		       . "Nav Link # " . $element->get_place);
+    return if $burner->get_mode == PUBLISH_MODE;
+    $burner->throw_error("You forgot to relate a document for element #"
+                         . $element->get_place + 1 . ', '
+                         . $element->get_name);
 }
 my $tip = escape_html($element->get_data('tooltip'));
 my $uri = $burner->best_uri($rel_story)->as_string;

@@ -30,9 +30,9 @@ my %img = map { scalar $_->get_data('type') => $_ }
 unless ($img{thumb} && $img{full}) {
     # Throw an error or return.
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error( 'You forgot to add full and/or thumbnail Link to ' .
-                          'Screenshot Image subelements to Screenshot #'
-                          . $element->get_place );
+    $burner->throw_error( 'You forgot to add full and/or thumbnail Link to '
+                         . 'element #' . $element->get_place + 1 . ', '
+                         . $element->get_name);
 }
 
 my $thumb = $img{thumb}->get_related_media;
@@ -41,8 +41,8 @@ for my $e ($full && $thumb) {
     unless ($e) {
         # Throw an error or return.
         return if $burner->get_mode == PUBLISH_MODE;
-        $burner->throw_error( 'You forgot to relate an image to ' .
-                              'Link to Screenshot Image #' . $e->get_place );
+        $burner->throw_error( 'You forgot to relate an image to element #'
+                              . $e->get_place + 1 . ', '. $e->get_name);
     }
 }
 

@@ -2,8 +2,8 @@
 my $doc = $element->get_related_story;
 unless ($doc) {
   return if $burner->get_mode == PUBLISH_MODE;
-  $burner->throw_error("You forgot to relate a document for "
-		       . "Related Document Link # " . $element->get_place);
+  $burner->throw_error("You forgot to relate a document for element #"
+                       . $element->get_place + 1 . ', ' . $element->get_name);
 }
 $m->comp('/util/xhtml/output_link.mc',
          url  => $burner->best_uri($doc)->as_string . '/',

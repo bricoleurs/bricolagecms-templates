@@ -10,8 +10,9 @@ my $image = $element->get_related_media;
 unless ($image) {
     # Throw an error or return.
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error( 'You forgot to relate an image to ' .
-                          'Related Image #' . $element->get_place );
+    $burner->throw_error( 'You forgot to relate an image to element #'
+                         . $element->get_place + 1 . ', '
+                         . $element->get_name);
 }
 
 my $type  = $image->get_media_type->get_name;
@@ -19,8 +20,9 @@ my $type  = $image->get_media_type->get_name;
 unless ( $type =~ /^image/ ) {
     # Oops, it's not an image file!
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error( 'The media document associated with Related Image' .
-                          ' #' . $element->get_place . ' is not an image');
+    $burner->throw_error( 'The media document associated with element #'
+                          . $element->get_place + 1 . ', '
+                          . $element->get_name . ', is not an image');
 }
 
 my $ielem = $image->get_element;

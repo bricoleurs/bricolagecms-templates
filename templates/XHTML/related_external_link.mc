@@ -3,8 +3,8 @@ my $url = escape_html($element->get_data('url'));
 my $title = $element->get_data('link_text');
 unless ($url && $title) {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("You forgot to specify a URL and/or title for "
-                         . "Related External Link # " . $element->get_place);
+    $burner->throw_error("You forgot to specify a URL and/or title for element #"
+                         . $element->get_place + 1 . ', ' . $element->get_name);
 }
 $m->comp('/util/xhtml/output_link.mc',
          url  => $url,
