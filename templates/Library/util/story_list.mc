@@ -222,8 +222,6 @@ my %params = (
     OrderDirection               => 'DESC',
 
     # Limit to stories in the same categories as the current story?
-
-
     ( $story_cats
       ? ( 'story.category'       => $story->get_id )
       # Limit to subcategories of the current category?
