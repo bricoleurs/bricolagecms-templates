@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assets xmlns="http://bricolage.sourceforge.net/assets.xsd">
+ <element id="7">
+  <key_name>pull_quote</key_name>
+  <name>Pull Quote</name>
+  <description>A pull quote element</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>attribution</key_name>
+    <label>Attribution</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>select</type>
+    <key_name>position</key_name>
+    <label>Position</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>left</default>
+    <options>left,Left
+right,Right
+</options>
+   </field>
+  </fields>
+ </element>
+ <element id="1025">
+  <key_name>faq_question</key_name>
+  <name>FAQ Question</name>
+  <description>A single FAQ question and its answer.</description>
+  <burner>Mason</burner>
+  <type>Related Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>block_quote</subelement>
+   <subelement>list</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>question_paragraph</key_name>
+    <label>Question Paragraph</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <multiple>0</multiple>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>answer_paragraph</key_name>
+    <label>Answer Paragraph</label>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <multiple>0</multiple>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>answer_code</key_name>
+    <label>Answer Code</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1026">
+  <key_name>faq_section</key_name>
+  <name>FAQ Section</name>
+  <description>A section of an FAQ.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>faq_question</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>title</key_name>
+    <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1027">
+  <key_name>link_to_download</key_name>
+  <name>Link to Download</name>
+  <description>Link to a file to download.</description>
+  <burner>Mason</burner>
+  <type>Related Media and Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>Version</default>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>Download Bricolage</default>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>changelog_url</key_name>
+    <label>Changelog URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>date</type>
+    <key_name>release_date</key_name>
+    <label>Release Date</label>
+    <required>0</required>
+    <repeatable>0</repeatable>
+   </field>
+  </fields>
+ </element>
+ <element id="1028">
+  <key_name>link_to_screenshot_image</key_name>
+  <name>Link to Screenshot Image</name>
+  <description>A link to an image used in a screenshot.</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>select</type>
+    <key_name>type</key_name>
+    <label>Type</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>thumb</default>
+    <options>thumb,Thumb
+half,Half,
+full,Full
+tiff,TIFF
+pdf,PDF
+</options>
+   </field>
+  </fields>
+ </element>
+ <element id="1030">
+  <key_name>nav_link</key_name>
+  <name>Nav Link</name>
+  <description>Link to a document used for the site nav bar.</description>
+  <burner>Mason</burner>
+  <type>Related Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1031">
+  <key_name>external_nav_link</key_name>
+  <name>External Nav Link</name>
+  <description>Link to an external URL used in the nav bar.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>url</key_name>
+    <label>URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>http://</default>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1032">
+  <key_name>nav_menu_item</key_name>
+  <name>Nav Menu Item</name>
+  <description>A single nav menu and its submenus.</description>
+  <burner>Mason</burner>
+  <type>Related Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>external_nav_link</subelement>
+   <subelement>nav_link</subelement>
+   <subelement>nav_menu_item</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>title</key_name>
+    <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1033">
+  <key_name>list</key_name>
+  <name>List</name>
+  <description>An ordered or unordered list.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>external_link_item</subelement>
+   <subelement>link_to_document_item</subelement>
+   <subelement>list</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>select</type>
+    <key_name>type</key_name>
+    <label>Type</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>ul</default>
+    <options>ul,Unordered
+ol,Ordered
+</options>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>item</key_name>
+    <label>Item</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <multiple>0</multiple>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>code</key_name>
+    <label>Code</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1034">
+  <key_name>related_audio</key_name>
+  <name>Related Audio</name>
+  <description>Link to a related audio file.</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>title</key_name>
+    <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>select</type>
+    <key_name>position</key_name>
+    <label>Position</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>left</default>
+    <options>left,Left
+right,Right
+</options>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>caption</key_name>
+    <label>Caption</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1035">
+  <key_name>related_image</key_name>
+  <name>Related Image</name>
+  <description>Link to a related image file.</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>title</key_name>
+    <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>alt_text</key_name>
+    <label>Alt Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>select</type>
+    <key_name>position</key_name>
+    <label>Position</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>left</default>
+    <options>left,Left
+right,Right
+</options>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>caption</key_name>
+    <label>Caption</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1036">
+  <key_name>related_links</key_name>
+  <name>Related Links</name>
+  <description>Links to related stories.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>related_document_link</subelement>
+   <subelement>related_external_link</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>title</key_name>
+    <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>Related Links</default>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1037">
+  <key_name>screenshot</key_name>
+  <name>Screenshot</name>
+  <description>A screenshot.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>link_to_screenshot_image</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>title</key_name>
+    <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>alt_text</key_name>
+    <label>Alt Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>description</key_name>
+    <label>Description</label>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1038">
+  <key_name>archive</key_name>
+  <name>Archive</name>
+  <description>Archive of all stories on the site or in a category and all of its subcategories.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="Archive">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Archive</output_channel>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">Mason</output_channel>
+   <output_channel site="bricolage.cc">RSS</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields></fields>
+ </element>
+ <element id="1039">
+  <key_name>downloads</key_name>
+  <name>Downloads</name>
+  <description>The site downloads page.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>download_branch</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1040">
+  <key_name>faq</key_name>
+  <name>FAQ</name>
+  <description>Frequently asked questions.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>faq_section</subelement>
+  </subelements>
+  <fields></fields>
+ </element>
+ <element id="1041">
+  <key_name>home_page</key_name>
+  <name>Home Page</name>
+  <description>Site home page.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>download_shortcut</subelement>
+   <subelement>list</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1042">
+  <key_name>screenshots</key_name>
+  <name>Screenshots</name>
+  <description>Screenshots.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>screenshot</subelement>
+  </subelements>
+  <fields></fields>
+ </element>
+ <element id="1043">
+  <key_name>fixed_document</key_name>
+  <name>Fixed Document</name>
+  <description>Fixed location document.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>block_quote</subelement>
+   <subelement>download_shortcut</subelement>
+   <subelement>external_link_button</subelement>
+   <subelement>list</subelement>
+   <subelement>pull_quote</subelement>
+   <subelement>related_audio</subelement>
+   <subelement>related_document_button</subelement>
+   <subelement>related_image</subelement>
+   <subelement>related_links</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>teaser</key_name>
+    <label>Teaser</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <multiple>0</multiple>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>code</key_name>
+    <label>Code</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1044">
+  <key_name>article</key_name>
+  <name>Article</name>
+  <description>Dated article.</description>
+  <burner>Mason</burner>
+  <type>Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>block_quote</subelement>
+   <subelement>download_shortcut</subelement>
+   <subelement>list</subelement>
+   <subelement>pull_quote</subelement>
+   <subelement>related_audio</subelement>
+   <subelement>related_image</subelement>
+   <subelement>related_links</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>teaser</key_name>
+    <label>Teaser</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <multiple>0</multiple>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>long_teaser</key_name>
+    <label>Long Teaser</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>code</key_name>
+    <label>Code</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1045">
+  <key_name>nav_menu</key_name>
+  <name>Nav Menu</name>
+  <description>Site navigation menu.</description>
+  <burner>Mason</burner>
+  <type>Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="Mason">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">Mason</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>external_nav_link</subelement>
+   <subelement>nav_link</subelement>
+   <subelement>nav_menu_item</subelement>
+  </subelements>
+  <fields></fields>
+ </element>
+ <element id="1046">
+  <key_name>image</key_name>
+  <name>Image</name>
+  <description>An image file.</description>
+  <burner>Mason</burner>
+  <type>Image</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>caption</key_name>
+    <label>Caption</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>width</key_name>
+    <label>Width</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>color_type</key_name>
+    <label>Color Type</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>resolution</key_name>
+    <label>Resolution</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>compression</key_name>
+    <label>Compression</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>height</key_name>
+    <label>Height</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1047">
+  <key_name>fixed_image</key_name>
+  <name>Fixed Image</name>
+  <description>Fixed location image file.</description>
+  <burner>Mason</burner>
+  <type>Fixed Image</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>caption</key_name>
+    <label>Caption</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>compression</key_name>
+    <label>Compression</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>width</key_name>
+    <label>Width</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>resolution</key_name>
+    <label>Resolution</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>color_type</key_name>
+    <label>Color Type</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>height</key_name>
+    <label>Height</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1048">
+  <key_name>static_file</key_name>
+  <name>Static File</name>
+  <description>CSS, JavaScript, SSI, etc.</description>
+  <burner>Mason</burner>
+  <type>Fixed Files</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields></fields>
+ </element>
+ <element id="1049">
+  <key_name>audio</key_name>
+  <name>Audio</name>
+  <description>Audio file.</description>
+  <burner>Mason</burner>
+  <type>Audio</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields></fields>
+ </element>
+ <element id="1050">
+  <key_name>download_shortcut</key_name>
+  <name>Download Shortcut</name>
+  <description>A simple link to a downloadable file.</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>Version </default>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>description</key_name>
+    <label>Description</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>Stable</default>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1051">
+  <key_name>download_branch</key_name>
+  <name>Download Branch</name>
+  <description>A download branch, with links to all the releases in the branch.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements>
+   <subelement>link_to_download</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>name</key_name>
+    <label>Name</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1052">
+  <key_name>related_document_link</key_name>
+  <name>Related Document Link</name>
+  <description>Link to a story document related to the current document.</description>
+  <burner>Mason</burner>
+  <type>Related Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>teaser</key_name>
+    <label>Teaser</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1053">
+  <key_name>related_external_link</key_name>
+  <name>Related External Link</name>
+  <description>Link to an external URL that's related to the current document.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>url</key_name>
+    <label>URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>teaser</key_name>
+    <label>Teaser</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1054">
+  <key_name>personal_profile</key_name>
+  <name>Personal Profile</name>
+  <description>The profile of data about a person, such as a Bricolage developer.</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>name</key_name>
+    <label>Name</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>email</key_name>
+    <label>Email</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>site_name</key_name>
+    <label>Site Name</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>site_url</key_name>
+    <label>Site URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <multiple>0</multiple>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>irc_nick</key_name>
+    <label>IRC Nick</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>location</key_name>
+    <label>Location</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>responsibilities</key_name>
+    <label>Responsibilities</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>bio</key_name>
+    <label>Bio</label>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1055">
+  <key_name>roster</key_name>
+  <name>Roster</name>
+  <description>List of personal profiles of people involved in the project.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>personal_profile</subelement>
+  </subelements>
+  <fields></fields>
+ </element>
+ <element id="1057">
+  <key_name>site_profile</key_name>
+  <name>Site Profile</name>
+  <description>The profile of a site powered by Bricolage</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>name</key_name>
+    <label>Name</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>site_url</key_name>
+    <label>Site URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>http://</default>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>description</key_name>
+    <label>Description</label>
+    <required>0</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1060">
+  <key_name>sites</key_name>
+  <name>Sites</name>
+  <description>List of sites powered by Bricolage</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>site_profile</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <multiple>0</multiple>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1061">
+  <key_name>mailing_list</key_name>
+  <name>Mailing List</name>
+  <description>Information about a mailing list</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>list_name</key_name>
+    <label>List Name</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>list_url</key_name>
+    <label>List URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>archive_url</key_name>
+    <label>Archive URL</label>
+    <required>0</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>description</key_name>
+    <label>Description</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1062">
+  <key_name>mailing_lists</key_name>
+  <name>Mailing Lists</name>
+  <description>A list of mailing lists.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>mailing_list</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <multiple>0</multiple>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>para</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1063">
+  <key_name>download</key_name>
+  <name>Download</name>
+  <description>Downloadable files, such as a release of Bricolage.</description>
+  <burner>Mason</burner>
+  <type>Fixed Files</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields></fields>
+ </element>
+ <element id="1064">
+  <key_name>changes</key_name>
+  <name>Changes</name>
+  <description>List of changes in a Bricolage release.</description>
+  <burner>Mason</burner>
+  <type>Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="Slugged XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">Slugged XHTML</output_channel>
+  </output_channels>
+  <subelements>
+   <subelement>download_shortcut</subelement>
+   <subelement>list</subelement>
+  </subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>header</key_name>
+    <label>Header</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>subheader</key_name>
+    <label>Subheader</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1065">
+  <key_name>link_to_document_item</key_name>
+  <name>Link to Document Item</name>
+  <description>List item link to another Bricolage document.</description>
+  <burner>Mason</burner>
+  <type>Related Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>description</key_name>
+    <label>Description</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1066">
+  <key_name>external_link_item</key_name>
+  <name>External Link Item</name>
+  <description>List item link to a URL not managed in Bricolage.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>url</key_name>
+    <label>URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>link_text</key_name>
+    <label>Link Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>textarea</type>
+    <key_name>description</key_name>
+    <label>Description</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+ <element id="1068">
+  <key_name>block_quote</key_name>
+  <name>Block Quote</name>
+  <description>Inline extended quotation.</description>
+  <burner>Mason</burner>
+  <type>Subelement</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>attribution</key_name>
+    <label>Attribution</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+  </fields>
+ </element>
+ <element id="1069">
+  <key_name>external_link_button</key_name>
+  <name>External Link Button</name>
+  <description>An image that links to URL.</description>
+  <burner>Mason</burner>
+  <type>Related Media</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>alt_text</key_name>
+    <label>Alt Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>url</key_name>
+    <label>URL</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>select</type>
+    <key_name>position</key_name>
+    <label>Position</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>left</default>
+    <options>left,Left
+right,Right
+</options>
+   </field>
+  </fields>
+ </element>
+ <element id="1070">
+  <key_name>related_document_button</key_name>
+  <name>Related Document Button</name>
+  <description>Outputs an image as link to another document.</description>
+  <burner>Mason</burner>
+  <type>Related Media and Story</type>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>text</type>
+    <key_name>alt_text</key_name>
+    <label>Alt Text</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>select</type>
+    <key_name>position</key_name>
+    <label>Position</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <default>left</default>
+    <options>left,Left
+right,Right
+</options>
+   </field>
+  </fields>
+ </element>
+ <element id="1071">
+  <key_name>document_models</key_name>
+  <name>Document Models</name>
+  <description>For the creation of a list of document models.</description>
+  <burner>Mason</burner>
+  <type>Fixed Document</type>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelements></subelements>
+  <fields>
+   <field>
+    <type>textarea</type>
+    <key_name>paragraph</key_name>
+    <label>Paragraph</label>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <rows>4</rows>
+    <cols>40</cols>
+   </field>
+  </fields>
+ </element>
+</assets>
+<!--
+
+Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation, version 2.1 of the License.
+
+This library is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+details.
+
+You should have received a copy of the GNU Lesser General Public License along
+with this library (see the the license.txt file); if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
+
+-->
