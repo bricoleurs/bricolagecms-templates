@@ -20,6 +20,7 @@ Revision history for bricolage.cc Templates & Elements
       - Added title attributes (tool tips) to the links in "mailing_list.mc".
       - Converting <q> tags in titles to Unicode entities for use in the
         <title> tag in order to preserve quoting.
+      - Added "title" field to the "List" element.
 
 1.10  2004-08-19T23:45:53
       - Added trailing slash to the "Changelog" link in the

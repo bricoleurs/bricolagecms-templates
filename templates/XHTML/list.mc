@@ -1,3 +1,7 @@
+        <div class="list">
+% if (my $title = $element->get_data('title')) {
+          <h4><% $title %></h4>
+% }
 % my $tag = $element->get_data('type') || 'ul';
           <<% $tag %>>
 <%perl>;
@@ -38,6 +42,7 @@ foreach my $e ( $element->get_elements(qw(item paragraph code list
 $m->print("</li>\n") if $in_item;
 </%perl>\
           </<% $tag %>>
+        </div>
 <%doc>
 
 =pod
