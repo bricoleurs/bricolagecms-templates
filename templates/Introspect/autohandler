@@ -4,6 +4,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <style type="text/css">@import url("/ui/css/screen.css");</style>
+    <style type="text/css">@import url("/ui/css/introspect.css");</style>
     <title><% $title %></title>
     <& /util/xhtml/meta_keywords.mc &>
     <script type="text/javascript" src="/ui/js/lib.js"></script>
@@ -17,9 +18,10 @@
         <div id="body">
           <h1><% $story->get_title %></h1>
           <p><% $story->get_description || $story->get_element->get_element->get_description %></p>
-% $m->comp('.more');
-% $m->comp('/util/xhtml/introspect.mc', full_page => 0);
-% $m->comp('.more');
+% $m->comp('/util/xhtml/introspect.mc', full_page => 0, include_css => 0);
+          <div id="pagenav">
+           <p id="pagenext"><a href="/about/doc_models/" title="">More Document Models</a></p>
+          </div>
         </div>
 % #<& /util/xhtml/sidebar.mc &>
       </div>
@@ -53,11 +55,6 @@ s/([\s\n])'/$1&#x2018;/g; # Make opening single quotation marks.
 s/'/&#x2019;/g;           # Make proper apostrophes and closing single quotation marks.
 s/(?<!\<\!)--(?!>)/&#x2014;/g; # Make proper m-dashes, but allow comments.
 </%filter>\
-<%def .more>
-          <div id="pagenav">
-           <p id="pagenext"><a href="/about/doc_models/" title="">More Document Models</a></p>
-          </div>
-</%def>\
 <%doc>
 
 =pod
