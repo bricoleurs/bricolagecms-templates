@@ -2,6 +2,8 @@ Revision history for bricolage.cc Templates & Elements
 ======================================================
 
 1.21
+      - Fixed contributor_list.mc to properly default to sorting on full
+        names.
       - Replaced calls to Apache::Util::escape_html() (which doesn't work with
         Unicode and can introduce invalid XML entities) in the RSS template
         and replaced them with XML CDATA sections. This is a much cleaner way
