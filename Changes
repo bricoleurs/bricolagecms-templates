@@ -12,6 +12,9 @@ Revision history for bricolage.cc Templates & Elements
       - Added "category_uri" parameter to "story_list.mc" to specify a
         category other than the current category to search for related
         stories.
+      - Added "by_cover_date" parameter to "story_list.mc" so that stories
+        can be searched for and returned in reverse order by cover date
+        rather than first publish date.
 
 1.10  2004-08-19T23:45:53
       - Added trailing slash to the "Changelog" link in the

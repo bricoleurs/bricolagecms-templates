@@ -22,6 +22,7 @@ story_list.mc - Returns a list of related stories
       current_cats   => 0,
       subcats        => 1,
       all_subcats    => 1,
+      by_cover_date  => 0,
   );
 
 =head1 DESCRIPTION
@@ -92,13 +93,22 @@ C<< $story->get_categories >> or any of their subcategories. This parameter is
 ignored if either the C<story_cats> parameter or the C<subcats> parameter is
 passed a true value.
 
+=item by_cover_date
+
+Pass a true value to this parameter in order to search for and return stories
+in reverse chronological order by cover date. By default, F<story_list.mc>
+sorts stories by cover date during previews and by first publish date during
+publishes. But some may prefer to sort by cover date during publishes as well.
+Pass a true value to this parameter in order to get that behavior. False by
+default. Note that sorting is always by cover date during previews.
+
 =item until
 
 The maximum date for the stories returned. In publish mode, the
-C<first_publish_date> date will be used; in preview mode, the C<cover_date>
-will be used. If the value of this parameter is "story", then the first
-publish date or cover date of the current story will be used. That is, it's
-equivalent to:
+C<first_publish_date> date will be used unless the C<by_cover_date> parameter
+is set to a true value; in preview mode, the C<cover_date> will be used. If
+the value of this parameter is "story", then the first publish date or cover
+date of the current story will be used. That is, it's equivalent to:
 
     until => $story->get_first_publish_date(Bric::Config::ISO_8601_FORMAT)
              || $story->get_cover_date(Bric::Config::ISO_8601_FORMAT)
@@ -189,6 +199,7 @@ $story_cats     => undef
 $subcats        => undef
 $all_subcats    => undef
 $category_uri   => undef
+$by_cover_date  => undef
 </%args>\
 <%init>;
 my $count = 0;
@@ -211,6 +222,19 @@ my @keywords = $which_keywords
   ? map { $_->get_name }
     $m->comp('/util/keyword_list.mc', which => $which_keywords)
   : ();
+
+# Figure out what column to sort by and if there is a date to select up to.
+my $order_by;
+if ($by_cover_date) {
+    $order_by = 'cover_date';
+    $until = $story->get_cover_date(Bric::Config::ISO_8601_FORMAT)
+      if $until && $until eq 'story';
+} else {
+    $order_by = 'first_publish_date';
+    $until = $story->get_first_publish_date(Bric::Config::ISO_8601_FORMAT)
+      || Bric::Util::Time::strfdate
+      if $until && $until eq 'story';
+}
 
 # Assemble the parameters.
 my %params = (
@@ -261,13 +285,9 @@ my %params = (
       ? (
           # Only return published stories ordered by first publish date.
           publish_status         => '1',
-          Order                  => 'first_publish_date',
+          Order                  => $order_by,
           ( $until
-            ? ( first_publish_date_end => $until eq 'story'
-                ? $story->get_first_publish_date(Bric::Config::ISO_8601_FORMAT)
-                  || Bric::Util::Time::strfdate
-                : $until
-              )
+            ? ( "$order_by\_end" => $until )
             : ()
           )
         )
@@ -276,11 +296,7 @@ my %params = (
           # Return published and unpublished stories ordered by cover date.
           Order                  => 'cover_date',
           ( $until
-            ? ( cover_date => $until eq 'story'
-                ? $story->get_first_publish_date(Bric::Config::ISO_8601_FORMAT)
-                  || $story->get_cover_date(Bric::Config::ISO_8601_FORMAT)
-                : $until
-               )
+            ? ( cover_date       => $until )
             : ()
            )
         )
