@@ -7,7 +7,7 @@ $ques_no
 <%perl>;
 for my $ans ($element->get_elements(qw(answer_paragraph answer_code list block_quote))) {
     my $kn = $ans->get_key_name;
-    if ($kn eq 'paragraph') {
+    if ($kn eq 'answer_paragraph') {
         $m->print("              <p>", $ans->get_data, "</p>\n");
     } elsif ($kn eq 'answer_code') {
         (my $code = escape_html($ans->get_data)) =~ s/'/&#x0027;/g;
