@@ -50,6 +50,7 @@ right,Right
   <active>1</active>
   <top_level>0</top_level>
   <subelements>
+   <subelement>block_quote</subelement>
    <subelement>list</subelement>
   </subelements>
   <fields>
@@ -260,6 +261,14 @@ pdf,PDF
     <type>text</type>
     <key_name>title</key_name>
     <label>Title</label>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <size>32</size>
+   </field>
+   <field>
+    <type>text</type>
+    <key_name>tooltip</key_name>
+    <label>Tooltip</label>
     <required>1</required>
     <repeatable>0</repeatable>
     <size>32</size>
@@ -1404,7 +1413,7 @@ right,Right
   <name>Download</name>
   <description>Downloadable files, such as a release of Bricolage.</description>
   <burner>Mason</burner>
-  <type>Other Media</type>
+  <type>Fixed Files</type>
   <active>1</active>
   <top_level>1</top_level>
   <sites>
