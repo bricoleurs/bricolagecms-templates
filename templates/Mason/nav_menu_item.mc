@@ -1,5 +1,5 @@
 % my $class = $burner->notes('first_nav') ? '' : ' class="first"';
-      <li<% $class %>><a href="<% $uri %>"><% $element->get_data('title') %></a>
+      <li<% $class %>><a href="<% $uri %>" title="<% $tip %>"><% $element->get_data('title') %></a>
         <ul>
 % $burner->display_element($_)
 %   for $element->get_elements(qw(external_nav_link nav_link nav_menu_item));
@@ -8,8 +8,10 @@
 % $burner->notes(first_nav => 1);
 <%init>;
 my $uri = '#';
+my $tip = '';
 if (my $link = $element->get_related_story) {
     $uri = $burner->best_uri($link)->as_string . '/';
+    $tip = $element->get_data('tooltip') || '';
 }
 </%init>\
 <%doc>

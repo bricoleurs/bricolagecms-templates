@@ -1,18 +1,20 @@
-% my $cat = $burner->get_cat->get_uri;
-% $cat = undef if $cat eq '/archive';
-% my @articles = $m->comp('/util/archive_list.mc', category => $cat);
           <h1>Recent News</h1>
           <dl>
-% for my $art (@articles) {
-%     my $elem = $art->get_element;
-            <dt><a href="<% $burner->best_uri($art)->as_string . '/' %>" title=""><% $art->get_title %></a></dt>
-            <dd>
-              <p><% $elem->get_data('teaser') || $elem->get_data('paragraph') %></p>
-              <p class="date"><% $art->get_cover_date('%Y.%m.%d') %></p>
-            </dd>
-% }
+<%perl>;
+my $cat = $burner->get_cat->get_uri;
+$cat = undef if $cat eq '/archive';
+for my $art ($m->comp('/util/archive_list.mc', category => $cat)) {
+    my $elem = $art->get_element;
+    $m->comp('/util/xhtml/output_link.mc',
+             url => $burner->best_uri($art)->as_string . '/',
+             text => $art->get_title,
+             teas => $elem->get_data('teaser') || $elem->get_data('paragraph'),
+             date => $art->get_cover_date('%Y.%m.%d'),
+    );
+}
+</%perl>
           </dl>
-          <p><a href="/archive/" title="Site Archives">Older stories...</a></p>
+          <p class="more"><a href="<% $burner->best_uri($story) %>/" title="<% escape_html $story->get_title %>">Older stories</a></p>
 <%doc>
 
 =pod

@@ -8,7 +8,8 @@ foreach my $e ( $element->get_elements(@elems)) {
     } elsif ($kn eq 'subheader') {
         $m->print('          <h3>', $e->get_data, "</h3>\n");
     } elsif ($kn eq 'code') {
-        $m->print('          <pre><%text>', escape_html($e->get_data), "</%text></pre>\n");
+        (my $code = escape_html($e->get_data)) =~ s/'/&#x0027;/g;
+        $m->print("          <pre><%text>$code</%text></pre>\n");
     } else {
         $burner->display_element($e);
     }

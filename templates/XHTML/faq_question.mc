@@ -5,13 +5,15 @@ $ques_no
               <dt><a id="<% "s${sect_no}q$ques_no" %>"><% $element->get_data('question_paragraph') %></a></dt>
               <dd>
 <%perl>;
-for my $ans ($element->get_elements(qw(answer_paragraph answer_code list))) {
+for my $ans ($element->get_elements(qw(answer_paragraph answer_code list block_quote))) {
     my $kn = $ans->get_key_name;
-    if ($kn eq 'list') {
-        $burner->display_element($ans);
+    if ($kn eq 'paragraph') {
+        $m->print("              <p>", $ans->get_data, "</p>\n");
+    } elsif ($kn eq 'answer_code') {
+        (my $code = escape_html($ans->get_data)) =~ s/'/&#x0027;/g;
+        $m->print("              <pre><%text>$code</%text></pre>\n");
     } else {
-        my $tag = $kn eq 'answer_paragraph' ? 'p' : 'pre';
-        $m->print("              <$tag>", $ans->get_data, "</$tag>\n");
+        $burner->display_element($ans);
     }
 }
 if (my $rel = $element->get_related_story) {

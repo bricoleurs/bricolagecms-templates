@@ -27,8 +27,8 @@ foreach my $e ( $element->get_elements(qw(item paragraph code list
             $m->print("\n              <p>", $e->get_data, "</p>");
         } elsif ($kn eq 'code') {
             # Just output a preformatted field as a subelement of an item.
-            $m->print("\n              <pre><%text>",
-                      escape_html($e->get_data), "</%text></pre>");
+            (my $code = escape_html($e->get_data)) =~ s/'/&#x0027;/g;
+            $m->print("\n              <pre><%text>$code</%text></pre>");
         } else {
             # If it's a list, we're embedded!
             $burner->display_element($e);

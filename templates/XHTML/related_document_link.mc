@@ -12,7 +12,7 @@ $m->comp('/util/xhtml/output_link.mc',
          tip  => escape_html($element->get_data('tooltip')),
          teas => scalar $element->get_data('teaser')
                  || scalar $doc->get_element->get_data('teaser'),
-         date => $doc->get_cover_date('%Y.%m.%d')
+         date => $doc->is_fixed ? undef : $doc->get_cover_date('%Y.%m.%d'),
 );
 return;
 </%init>\

@@ -1,3 +1,10 @@
+          <div id="downloadbox">
+            <dl>
+              <dt><a href="<% $uri %>" title="<% $tip %>">Download Now!</a></dt>
+              <dd class="current">(<% $text %>)</dd>
+              <dd class="more"><a href="/downloads/" title="Older releases and other downloads">More Downloads</a></dd>
+            </dl>
+          </div>
 <%init>;
 my $download = $element->get_related_media;
 unless ($download) {
@@ -8,10 +15,6 @@ unless ($download) {
 my $tip = escape_html($element->get_data('tooltip'));
 my $uri = $burner->best_uri($download)->as_string;
 my $text = $element->get_data('link_text') || $download->get_title;
-my $desc = $element->get_data('description');
-$desc = defined $desc && $desc ne '' ? " ($desc)" : '';
-$m->print(qq{              <dd><a href="$uri" title="$tip">$text</a>$desc</dd>\n});
-return;
 </%init>\
 <%doc>
 

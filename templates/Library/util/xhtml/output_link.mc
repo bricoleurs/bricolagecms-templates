@@ -1,8 +1,8 @@
 % $tip = '' unless defined $tip;
             <dt><a href="<% $url %>" title="<% $tip %>"><% $text %></a></dt>
             <dd>
-<% $teas ? "              <p>$teas</p>\n" : '' %>\
 <% $date ? qq{              <p class="date">$date</p>\n} : '' %>\
+<% $teas ? "              <p>$teas</p>\n" : '' %>\
             </dd>
 <%args>
 $url

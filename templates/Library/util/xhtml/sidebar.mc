@@ -1,17 +1,15 @@
           <div id="sidebar">
-% if ($element->get_container('download_shortcut')) {
-          <div id="downloadbox">
-            <dl>
-              <dt>Download Now!</dt>
-% $burner->display_element($_) for $element->get_elements('download_shortcut');
-            </dl>    
-          </div>
-% }
-% if (my $links = $element->get_container('related_links')) {
-%     $burner->display_element($links);
-% } else {
-<% "<& /archive/mason.cmp &>\\" %>
-% }
+<% "<& /ui/ssi/search.cmp &>\\" %>
+<%perl>;
+if (my $download_shortcut = $element->get_container('download_shortcut')) {
+    $burner->display_element($download_shortcut);
+}
+if (my $links = $element->get_container('related_links')) {
+    $burner->display_element($links);
+} else {
+    $m->print("<& /archive/mason.cmp &>\\\n");
+}
+</%perl>
         </div>
 <%doc>
 
