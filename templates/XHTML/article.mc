@@ -10,8 +10,8 @@
           </div>
 % $m->comp('/util/xhtml/output_body.mc', %ARGS);
 <%cleanup>;
-return if $burner->get_mode == PUBLISH_MODE
-  || $story->get_publish_status;
+return unless $burner->get_mode == PUBLISH_MODE
+  && not $story->get_publish_status;
 $story->set_publish_status(1);
 $story->save;
 

@@ -1,5 +1,11 @@
 Revision history for bricolage.cc Templates & Elements
 ======================================================
 
-1.00
+1.01
+      - Added trailing slash to the "Changelog" link in the
+        link_to_download.mc XHTML template.
+      - Fixed Article XHTML template to properly republish the Archive when it
+        is published.
+
+1.00  2004-07-28T20:13:54
       - Initial public release.
