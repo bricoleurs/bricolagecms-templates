@@ -15,19 +15,23 @@ introspect.mc - Outputs a graphical representation of a story type element tree
 =head1 Description
 
 This template outputs a graphical representation of the element structure of a
-story type element. Simply create a template for your story type element, have
-it execute this template, and you're done. Create a new document for the story
-type element and preview it.
+story type element. To see examples of its output, visit
+L<http://www.bricolage.cc/about/doc_models/> on the Bricolage Website.
+
+To use this template, simply create a template for your story type element,
+have it execute this template, and you're done. Create a new document for the
+story type element and preview it.
 
 The output is XHTML 1.1, containing a series of embedded C<< <div> >>s, each
 representing a single element in the element tree. Each contains data about
-the element, any fields, and any subelements, as well as metadata about the
+the element, any fields and any subelements, as well as metadata about the
 element itself (name, key name, related story, etc.). The story type element
 itself also includes a list of associated sites and output channels.
 
-This template is smart enough to correctly handle recursive elements
-correctly. It also has embedded CSS to make the whole thing look nice. Patches
-to make it look even nicer are warmly welcomed.
+This template is smart enough to correctly handle recursive elements. It also
+has embedded CSS to make the whole thing look nice, with colors to distinguish
+up to ten levels of the element tree. Patches to make it look even nicer are
+warmly welcomed.
 
 =head1 Parameters
 
