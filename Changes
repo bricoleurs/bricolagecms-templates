@@ -14,6 +14,7 @@ Revision history for bricolage.cc Templates & Elements
         from the element object and display the proper element number.
       - RSS feeds now have XHTML stripped from the title of each article,
         since most RSS newsreaders can't seem to tell that it's XHTML.
+      - Added Introspection output channel and templates.
 
 1.00  2004-07-28T20:13:54
       - Initial public release.
