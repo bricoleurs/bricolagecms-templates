@@ -29,8 +29,10 @@
 % for my $doc (@docs) {
 %     my $url = 'http://www.bricolage.cc' . $doc->get_primary_uri . '/';
 %     my $elem = $doc->get_element;
+%     # Damn RSS readers don't recognize XHTML in the title.
+%     (my $title = $doc->get_title) =~ s|</?[^>]+>||g;
   <item rdf:about="<% $url %>">
-    <title><% escape_html $doc->get_title %></title>
+    <title><% escape_html $title %></title>
     <link><% $url %></link>
     <description><% escape_html $elem->get_data('long_teaser') || $elem->get_data('teaser') || $elem->get_data('paragraph') %></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
