@@ -135,7 +135,7 @@ if ($#contribs == 0) {
 }
 if ($sort) {
     # We need to resort them.
-    my $get = $sort eq 'full_list' ? sub { $_[0]->get_name($format) } :
+    my $get = $sort eq 'full_name' ? sub { $_[0]->get_name($format) } :
       Bric::Util::Grp::Parts::Member::Contrib->my_meths->{$sort}{get_meth};
     @contribs = sort { lc $get->($a) cmp lc $get->($b) } @contribs;
 }

@@ -1,5 +1,6 @@
+    <a href="<% $url |h%>" title="<% $element->get_data('tooltip') || '' |h %>"><% $title %></a>\
 <%init>;
-my $url = escape_html($element->get_data('url'));
+my $url = $element->get_data('url');
 my $title = $element->get_data('link_text');
 unless ($url && $title) {
     return if $burner->get_mode == PUBLISH_MODE;
@@ -7,12 +8,7 @@ unless ($url && $title) {
                          . 'element #' . $element->get_place + 1 . ', '
                          . $element->get_name);
 }
-my $tip = escape_html($element->get_data('tooltip')) || '';
-my $desc = $element->get_data('description');
-$desc = $desc ? ": $desc" : '';
-$m->print(qq{            <li><a href="$url" title="$tip">$title</a>$desc</li>});
-return;
-</%init>\
+</%init>
 <%doc>
 
 =pod

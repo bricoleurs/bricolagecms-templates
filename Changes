@@ -2,6 +2,10 @@ Revision history for bricolage.cc Templates & Elements
 ======================================================
 
 1.21
+      - Replaced calls to Apache::Util::escape_html() (which doesn't work with
+        Unicode and can introduce invalid XML entities) in the RSS template
+        and replaced them with XML CDATA sections. This is a much cleaner way
+        to escape XML entities in XML.
 
 1.20  2005-01-10T23:38:25
       - Modified the archive lookup template to look up only article documents

@@ -10,9 +10,9 @@
  xmlns:admin="http://webns.net/mvcb/"
 >
   <channel rdf:about="http://www.bricolage.cc<% $story->get_primary_uri %>/">
-    <title><% escape_html $story->get_title %></title>
+    <title><![CDATA[<% $story->get_title %>]]></title>
     <link><% $story->get_uri %>/</link>
-    <description><% escape_html $story->get_description || $story->get_title %></description>
+    <description><![CDATA[<%  $story->get_description || $story->get_title %>]]></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
     <dc:language>en-us</dc:language>
     <dc:rights>Copyright <% ht_time(time, '%Y') %> Bricolage Developers</dc:rights>
@@ -35,9 +35,9 @@
 %     $title =~ s|</q>|&#x201d;|g if $title =~ s|<q>|&#x201c;|g;
 %     $title =~ s|</?[^>]+>||g;
   <item rdf:about="<% $url %>">
-    <title><% escape_html $title %></title>
+    <title><![CDATA[<% $title %>]]></title>
     <link><% $url %></link>
-    <description><% escape_html(scalar $elem->get_data('long_teaser') || scalar $elem->get_data('teaser') || scalar $elem->get_data('paragraph')) %></description>
+    <description><![CDATA[<% scalar $elem->get_data('long_teaser') || scalar $elem->get_data('teaser') || scalar $elem->get_data('paragraph') %>]]></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
     <dc:date><% $doc->get_cover_date('%Y-%m-%dT%H:%M:%S%z') %></dc:date>
   </item>
