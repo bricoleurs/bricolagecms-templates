@@ -6,7 +6,7 @@ story_list.mc - Returns a list of related stories
 
 =head1 VERSION
 
-1.0
+1.2
 
 =head1 SYNOPSIS
 
@@ -73,10 +73,15 @@ C<all_subcats>).
 =item subcats
 
 Pass a true value for this parameter to limit the stories returned to stories
-in the same category or its subcategories subcategories that the current story
-is being burned to. In other words, the stories will be in the category
-retrurned by C<< $burner->get_cat >> or any of its subcategories. This
-parameter is ignored if the C<story_cats> parameter is passed a true value.
+in the same category or its subcategories that the current story is being
+burned to, or the category passed via the C<category_uri> parameter and all of
+its subcategories. This parameter is ignored if the C<story_cats> parameter is
+passed a true value.
+
+=item category_uri
+
+Pass in the URI of the category to be used with the C<subcats> parameter.
+Defaults to the value returned by C<< $burner->get_cat >>.
 
 =item all_subcats
 
@@ -183,6 +188,7 @@ $until          => undef
 $story_cats     => undef
 $subcats        => undef
 $all_subcats    => undef
+$category_uri   => undef
 </%args>\
 <%init>;
 my $count = 0;
@@ -216,11 +222,15 @@ my %params = (
     OrderDirection               => 'DESC',
 
     # Limit to stories in the same categories as the current story?
+
+
     ( $story_cats
       ? ( 'story.category'       => $story->get_id )
       # Limit to subcategories of the current category?
       : ( $subcats
-          ? ( category_uri       => $burner->get_cat->get_uri . '%' )
+          ? ( category_uri       => (defined $category_uri
+                                       ? $category_uri
+                                       : $burner->get_cat->get_uri) . '%' )
           # Limit to any categories and subcategories of the current story?
           : ( $all_subcats
               ? ( category_uri   => ANY(map { $_->get_uri . '%' }
