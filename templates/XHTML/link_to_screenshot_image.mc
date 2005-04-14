@@ -12,8 +12,9 @@ unless ($shot) {
                           . $element->get_name);
 }
 
-my $w = $element->get_data('width');
-my $h = $element->get_data('height');
+my $selem = $shot->get_element;
+my $w = $selem->get_data('width');
+my $h = $selem->get_data('height');
 my $uri = $burner->best_uri($shot)->as_string;
 $m->print(qq{                    <li><a href="$uri" title="$tip ($type)" },
           qq{onclick="return popup(this, $w, $h)">$type</a></li>\n});
