@@ -13,6 +13,8 @@ Revision history for bricolage.cc Templates & Elements
         making all templates safe for outputting multibyte Unicode characters,
         as well as allowing them to be executed outside of mod_perl (such as
         by bric_queued).
+      - Updated element_types.xml with new "is_media" element instead of
+        the old (and conflicting) "media" element.
 
 1.20  2005-01-10T23:38:25
       - Modified the archive lookup template to look up only article documents
