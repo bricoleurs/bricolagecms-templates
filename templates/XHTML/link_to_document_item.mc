@@ -10,7 +10,7 @@ unless ($doc) {
 my $desc = $element->get_data('description');
 $desc = $desc ? ": $desc" : '';
 $m->print('            <li><a href="', $burner->best_uri($doc)->as_string . '/',
-          '" title="', escape_html($element->get_data('tooltip') || ''),
+          '" title="', encode_entities($element->get_data('tooltip') || ''),
           '">', ($element->get_data('link_text') || $doc->get_title),
           "</a>$desc</li>\n"
 );
@@ -30,7 +30,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

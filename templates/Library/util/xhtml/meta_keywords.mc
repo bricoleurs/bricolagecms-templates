@@ -45,7 +45,7 @@ USA.
 </%doc>
 <%init>;
 $m->print('<meta name="keywords" content="',
-          escape_html( join (', ', map { $_->get_name }
+          encode_entities( join (', ', map { $_->get_name }
                     $m->comp('/util/keyword_list.mc', %ARGS))),
           '" />');
 return;

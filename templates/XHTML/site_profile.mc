@@ -1,6 +1,6 @@
 % my $text = $element->get_data('name');
 % my $url = $element->get_data('site_url');
-            <dt><a href="<% escape_html($url) %>" title="Visit <% escape_html($text) %>"><% $text %></a></dt>
+            <dt><a href="<% encode_entities($url) %>" title="Visit <% encode_entities($text) %>"><% $text %></a></dt>
 % if (my $description = $element->get_data('description')) {
             <dd><% $description %></dd>
 % }
@@ -18,7 +18,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

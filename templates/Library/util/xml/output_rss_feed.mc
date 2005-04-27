@@ -15,7 +15,7 @@
     <description><![CDATA[<%  $story->get_description || $story->get_title %>]]></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
     <dc:language>en-us</dc:language>
-    <dc:rights>Copyright <% ht_time(time, '%Y') %> Bricolage Developers</dc:rights>
+    <dc:rights>Copyright <% Bric::Util::Time::strfdate(time, '%Y', 1) %> Bricolage Developers</dc:rights>
     <dc:publisher>www@bricolage.cc</dc:publisher>
     <dc:creator>www@bricolage.cc</dc:creator>
     <items>
@@ -69,7 +69,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

@@ -16,8 +16,11 @@ my $selem = $shot->get_element;
 my $w = $selem->get_data('width');
 my $h = $selem->get_data('height');
 my $uri = $burner->best_uri($shot)->as_string;
-$m->print(qq{                    <li><a href="$uri" title="$tip ($type)" },
-          qq{onclick="return popup(this, $w, $h)">$type</a></li>\n});
+my $event = $type eq 'PDF' || $type eq 'TIFF'
+  ? ''
+  : qq{ onclick="return popup(this, $w, $h)"}; #"
+$m->print(qq{                    <li><a href="$uri" title="$tip ($type)"},
+          "$event>$type</a></li>\n");
 return;
 </%init>\
 <%doc>
@@ -34,7 +37,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

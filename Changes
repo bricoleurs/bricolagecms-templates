@@ -4,10 +4,15 @@ Revision history for bricolage.cc Templates & Elements
 1.21
       - Fixed contributor_list.mc to properly default to sorting on full
         names.
-      - Replaced calls to Apache::Util::escape_html() (which doesn't work with
-        Unicode and can introduce invalid XML entities) in the RSS template
-        and replaced them with XML CDATA sections. This is a much cleaner way
-        to escape XML entities in XML.
+      - Replaced calls to Apache::Util::escape_html() (which doesn't work
+        with Unicode and can introduce invalid XML entities) in the RSS
+        template and replaced them with XML CDATA sections. This is a much
+        cleaner way to escape XML entities in XML.
+      - Fixed screenshot popups to work properly.
+      - Removed dependency on Apache::Util functions, thereby making them
+        making all templates safe for outputting multibyte Unicode characters,
+        as well as allowing them to be executed outside of mod_perl (such as
+        by bric_queued).
 
 1.20  2005-01-10T23:38:25
       - Modified the archive lookup template to look up only article documents

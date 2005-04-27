@@ -8,7 +8,7 @@ foreach my $e ( $element->get_elements(@elems)) {
     } elsif ($kn eq 'subheader') {
         $m->print('          <h3>', $e->get_data, "</h3>\n");
     } elsif ($kn eq 'code') {
-        (my $code = escape_html($e->get_data)) =~ s/'/&#x0027;/g;
+        (my $code = encode_entities($e->get_data)) =~ s/'/&#x0027;/g;
          $code =~ s/-/&#x002d;/g;
         $m->print("          <pre><%text>$code</%text></pre>\n");
     } else {
@@ -36,7 +36,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

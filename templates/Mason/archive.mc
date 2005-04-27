@@ -14,7 +14,7 @@ for my $art ($m->comp('/util/archive_list.mc', category => $cat)) {
 }
 </%perl>
           </dl>
-          <p class="more"><a href="<% $burner->best_uri($story) %>/" title="<% escape_html $story->get_title %>">Older stories</a></p>
+          <p class="more"><a href="<% $burner->best_uri($story) %>/" title="<% encode_entities $story->get_title %>">Older stories</a></p>
 <%doc>
 
 =pod
@@ -29,7 +29,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

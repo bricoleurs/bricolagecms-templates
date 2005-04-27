@@ -1,5 +1,5 @@
 <%perl>
-my $url = escape_html($element->get_data('url'));
+my $url = encode_entities($element->get_data('url'));
 my $title = $element->get_data('link_text');
 unless ($url && $title) {
     return if $burner->get_mode == PUBLISH_MODE;
@@ -9,7 +9,7 @@ unless ($url && $title) {
 $m->comp('/util/xhtml/output_link.mc',
          url  => $url,
          text => $title,
-         tip  => escape_html($element->get_data('tooltip')),
+         tip  => encode_entities($element->get_data('tooltip')),
          teas => scalar $element->get_data('teaser')
 );
 return;
@@ -28,7 +28,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

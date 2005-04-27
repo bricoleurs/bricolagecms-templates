@@ -2,7 +2,7 @@
             <a href="<% $url %>" title="<% $tip %>"><img src="<% $src %>" alt="<% $alt %>" /></a>
           </div> 
 <%init>;
-my $url = escape_html($element->get_data('url'));
+my $url = encode_entities($element->get_data('url'));
 unless ($url) {
     return if $burner->get_mode == PUBLISH_MODE;
     $burner->throw_error("You forgot to specify a URL and/or title for "
@@ -31,8 +31,8 @@ unless ( $type =~ /^image/ ) {
 }
 
 my $w   = $image->get_element->get_data('width');
-my $alt = escape_html($element->get_data('alt_text')) || '';
-my $tip = escape_html($element->get_data('tooltip')) || '';
+my $alt = encode_entities($element->get_data('alt_text')) || '';
+my $tip = encode_entities($element->get_data('tooltip')) || '';
 my $src = $burner->best_uri($image)->as_string;
 my $pos = $element->get_data('position') || 'left';
 </%init>\
@@ -50,7 +50,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

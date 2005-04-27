@@ -1,5 +1,5 @@
               <div class="shot">
-                <div class="shotimg"><a href="<% $burner->best_uri($full)->as_string %>" title="<% $tip %>"><img src="<% $burner->best_uri($thumb)->as_string %>" alt="<% $alt %>" style="width: <% $w %>px; height: <% $h %>px;" /></a></div>
+                <div class="shotimg"><a href="<% $burner->best_uri($full)->as_string %>" title="<% $tip %>" onclick="return popup(this, <% $fw %>, <% $fh %>)"><img src="<% $burner->best_uri($thumb)->as_string %>" alt="<% $alt %>" style="width: <% $w %>px; height: <% $h %>px;" /></a></div>
                 <div class="shotinfo">
                   <h2><% $element->get_data('title') %></h2>
                   <p><% $element->get_data('description') %></p>
@@ -52,6 +52,8 @@ my $alt = $element->get_data('alt_text');
 $alt = '' unless defined $alt;
 my $w = $thumb->get_data('width');
 my $h = $thumb->get_data('height');
+my $fw = $full->get_element->get_data('width');
+my $fh = $full->get_element->get_data('height');
 </%init>\
 <%doc>
 
@@ -67,7 +69,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

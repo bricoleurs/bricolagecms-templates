@@ -1,9 +1,9 @@
 % my $list_name = $element->get_data('list_name');
 % my $list_url  = $element->get_data('list_url');
 <dl class="mailinglists">
-  <dt><a href="<% $list_url %>" title="Subscribe to <% escape_html($list_name) %>"><% $list_name %></a></dt>
+  <dt><a href="<% $list_url %>" title="Subscribe to <% encode_entities($list_name) %>"><% $list_name %></a></dt>
 % if (my $archive_url = $element->get_data('archive_url')) {
-  <dd class="archivelink">[ <a href="<% $archive_url %>" title="Browse the <% escape_html($list_name) %> archives">Archives</a> ]</dd>
+  <dd class="archivelink">[ <a href="<% $archive_url %>" title="Browse the <% encode_entities($list_name) %> archives">Archives</a> ]</dd>
 % }
 % if ($element->get_data('description')) {
   <dd>
@@ -27,7 +27,7 @@ Marshall Roch <mashall@exclupen.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

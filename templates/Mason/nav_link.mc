@@ -7,7 +7,7 @@ unless ($rel_story) {
                          . $element->get_place + 1 . ', '
                          . $element->get_name);
 }
-my $tip = escape_html($element->get_data('tooltip'));
+my $tip = encode_entities($element->get_data('tooltip'));
 my $uri = $burner->best_uri($rel_story)->as_string;
 my $text = $element->get_data('link_text') || $rel_story->get_title;
 $m->print(qq{        <li$class><a href="$uri/" title="$tip">$text</a></li>\n});
@@ -28,7 +28,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

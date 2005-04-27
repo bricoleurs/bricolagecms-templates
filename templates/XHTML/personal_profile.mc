@@ -11,7 +11,7 @@
 %     my $text = $element->get_data('site_name') || $url;
 %     $text =~ s{^\w+://}{};
               <dt>Web Site</dt>
-              <dd><p><a href="<% escape_html($url) %>" title="Visit <% escape_html($text) %>"><% $text %></a><p></dd>
+              <dd><p><a href="<% encode_entities($url) %>" title="Visit <% encode_entities($text) %>"><% $text %></a><p></dd>
 % }
 % for my $p (@parts) {
 %     my $val = $element->get_data($p->[0]) or next;
@@ -50,7 +50,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

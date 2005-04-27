@@ -28,7 +28,7 @@ unless ( $type =~ /^image/ ) {
 my $ielem = $image->get_element;
 my $w = $ielem->get_data('width');
 my $caption = $element->get_data('caption') || $ielem->get_data('caption');
-my $alt = escape_html($element->get_data('alt_text') || '');
+my $alt = encode_entities($element->get_data('alt_text') || '');
 </%init>\
 <%doc>
 
@@ -44,7 +44,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

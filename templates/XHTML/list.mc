@@ -31,7 +31,7 @@ foreach my $e ( $element->get_elements(qw(item paragraph code list
             $m->print("\n              <p>", $e->get_data, "</p>");
         } elsif ($kn eq 'code') {
             # Just output a preformatted field as a subelement of an item.
-            (my $code = escape_html($e->get_data)) =~ s/'/&#x0027;/g;
+            (my $code = encode_entities($e->get_data)) =~ s/'/&#x0027;/g;
             $m->print("\n              <pre><%text>$code</%text></pre>");
         } else {
             # If it's a list, we're embedded!
@@ -57,7 +57,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

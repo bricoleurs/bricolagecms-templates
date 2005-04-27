@@ -1,6 +1,6 @@
 <%init>;
 my $class = $burner->notes('first_nav') ? '' : ' class="first"';
-my $url = escape_html($element->get_data('url'));
+my $url = encode_entities($element->get_data('url'));
 my $text = $element->get_data('link_text');
 unless ($url && $text) {
     return if $burner->get_mode == PUBLISH_MODE;
@@ -8,7 +8,7 @@ unless ($url && $text) {
                          . 'element #'. $element->get_place + 1 . ', '
                          . $element->get_name);
 }
-my $tip = escape_html($element->get_data('tooltip'));
+my $tip = encode_entities($element->get_data('tooltip'));
 $tip = '' unless defined $tip;
 $m->print(qq{        <li$class><a href="$url" title="$tip">$text</a></li>\n});
 $burner->notes(first_nav => 1);
@@ -28,7 +28,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

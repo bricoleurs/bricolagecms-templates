@@ -47,7 +47,7 @@ if (@articles >= $limit) {
 <%method .rss>
 % # Find the RSS output channel and output the link.
 % my ($oc) = Bric::Biz::OutputChannel->list({ name => 'RSS', site_id => $story->get_site_id });
-    <link rel="alternate" type="application/rss+xml" title="bricolage.cc <% escape_html($story->get_title) %> RSS Feed" href="<% $story->get_uri(undef, $oc) . '/rss.xml' %>" />
+    <link rel="alternate" type="application/rss+xml" title="bricolage.cc <% encode_entities($story->get_title) %> RSS Feed" href="<% $story->get_uri(undef, $oc) . '/rss.xml' %>" />
 </%method>\
 <%doc>
 
@@ -63,7 +63,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

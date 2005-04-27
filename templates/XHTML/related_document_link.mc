@@ -9,7 +9,7 @@ $m->comp('/util/xhtml/output_link.mc',
          url  => $burner->best_uri($doc)->as_string . '/',
          text => scalar $element->get_data('link_text')
                  || $doc->get_title,
-         tip  => escape_html($element->get_data('tooltip')),
+         tip  => encode_entities($element->get_data('tooltip')),
          teas => scalar $element->get_data('teaser')
                  || scalar $doc->get_element->get_data('teaser'),
          date => $doc->is_fixed ? undef : $doc->get_cover_date('%Y.%m.%d'),
@@ -30,7 +30,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

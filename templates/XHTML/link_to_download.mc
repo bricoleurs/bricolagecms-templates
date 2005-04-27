@@ -14,7 +14,7 @@ unless ($download->get_element_key_name eq 'download') {
                          . $element->get_name . ", is not a download file.");
 }
 
-my $tip = escape_html($element->get_data('tooltip'));
+my $tip = encode_entities($element->get_data('tooltip'));
 my $uri = $burner->best_uri($download)->as_string;
 my $text = $element->get_data('link_text') || $download->get_title;
 my $date = $element->get_data('release_date', 1, $fmt)
@@ -24,7 +24,7 @@ my $log_url;
 if (my $log = $element->get_related_story) {
     $log_url = $burner->best_uri($log)->as_string;
 } else {
-    $log_url = escape_html $element->get_data('changelog_url');
+    $log_url = encode_entities $element->get_data('changelog_url');
 }
 
 unless ($log_url) {
@@ -58,7 +58,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

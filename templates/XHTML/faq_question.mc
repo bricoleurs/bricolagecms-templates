@@ -10,7 +10,7 @@ for my $ans ($element->get_elements(qw(answer_paragraph answer_code list block_q
     if ($kn eq 'answer_paragraph') {
         $m->print("              <p>", $ans->get_data, "</p>\n");
     } elsif ($kn eq 'answer_code') {
-        (my $code = escape_html($ans->get_data)) =~ s/'/&#x0027;/g;
+        (my $code = encode_entities($ans->get_data)) =~ s/'/&#x0027;/g;
          $code =~ s/-/&#x002d;/g;
         $m->print("              <pre><%text>$code</%text></pre>\n");
     } else {
@@ -20,7 +20,7 @@ for my $ans ($element->get_elements(qw(answer_paragraph answer_code list block_q
 if (my $rel = $element->get_related_story) {
     $m->print(qq{              <p class="more"><a href="},
               $burner->best_uri($rel)->as_string,
-              qq{/" title="}, escape_html($rel->get_title),
+              qq{/" title="}, encode_entities($rel->get_title),
               qq{">Read more</a></p>\n});
 }
 </%perl>
@@ -39,7 +39,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
