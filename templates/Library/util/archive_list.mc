@@ -13,7 +13,7 @@ return Bric::Biz::Asset::Business::Story->list({
     OrderDirection   => 'DESC',
     Offset           => $offset,
     Limit            => $limit,
-    unexired         => 1,
+    unexpired        => 1,
     source_id        => $developers_source_id, # Exclude Introspection.
     # Limit to a category?
     ( defined $category
