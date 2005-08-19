@@ -1,7 +1,7 @@
           <div id="articlemeta">
             <p class="date"><% $story->get_cover_date('%Y.%m.%d') %></p>
           </div>
-% $m->comp('/util/xhtml/output_body.mc', %ARGS);\
+% $m->comp('/util/xhtml/output_body.mc', %ARGS);
 <%doc>
 
 =pod
