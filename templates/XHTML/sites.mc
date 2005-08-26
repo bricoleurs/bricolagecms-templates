@@ -1,6 +1,14 @@
 % $m->comp('/util/xhtml/output_body.mc', %ARGS);
           <dl class="sites">
-% $burner->display_element($_) for $element->get_elements('site_profile');
+<%perl>;
+# Handle the ordering here; the editor can't be trusted to get it right.
+$burner->display_element($_)
+    for
+    map  { $_->[1]                           }
+    sort { $a->[0] cmp $b->[0]               }
+    map  { [ lc $_->get_data('name') => $_ ] }
+    $element->get_elements('site_profile');
+</%perl>\
           </dl>
 <%doc>
 
