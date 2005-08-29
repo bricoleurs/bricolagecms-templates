@@ -17,6 +17,13 @@ Revision history for bricolage.cc Templates & Elements
         the old (and conflicting) "media" element.
       - Fixed typo in /util/archive_list.mc that would have allowed expired
         stories to be listed.
+      - Now using the "published_version" parameter (available in Bricolage
+        1.8.3 and newer) when searching for archives to republish whenever an
+        article is published.
+      - Now using the Schwartzian transform for more efficient sorting of
+        keywords in the keyword_list.mc template.
+      - Templates no longer add a trailing slash to URIs, since all URIs in
+        Bricolage and newer will include the slash.
 
 1.20  2005-01-10T23:38:25
       - Modified the archive lookup template to look up only article documents
