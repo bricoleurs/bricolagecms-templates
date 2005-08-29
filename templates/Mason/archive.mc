@@ -6,7 +6,7 @@ $cat = undef if $cat eq '/archive';
 for my $art ($m->comp('/util/archive_list.mc', category => $cat)) {
     my $elem = $art->get_element;
     $m->comp('/util/xhtml/output_link.mc',
-             url  => $burner->best_uri($art)->as_string . '/',
+             url  => $burner->best_uri($art)->as_string,
              text => $art->get_title,
              teas => scalar $elem->get_data('teaser')
                      || scalar $elem->get_data('paragraph'),
@@ -15,7 +15,7 @@ for my $art ($m->comp('/util/archive_list.mc', category => $cat)) {
 }
 </%perl>
           </dl>
-          <p class="more"><a href="<% $burner->best_uri($story) %>/" title="<% encode_entities $story->get_title %>">Older stories</a></p>
+          <p class="more"><a href="<% $burner->best_uri($story) %>" title="<% encode_entities $story->get_title %>">Older stories</a></p>
 <%doc>
 
 =pod

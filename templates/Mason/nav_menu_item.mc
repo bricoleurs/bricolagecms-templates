@@ -10,7 +10,7 @@
 my $uri = '#';
 my $tip = '';
 if (my $link = $element->get_related_story) {
-    $uri = $burner->best_uri($link)->as_string . '/';
+    $uri = $burner->best_uri($link)->as_string;
     $tip = $element->get_data('tooltip') || '';
 }
 </%init>\

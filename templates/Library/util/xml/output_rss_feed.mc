@@ -9,9 +9,9 @@
  xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
  xmlns:admin="http://webns.net/mvcb/"
 >
-  <channel rdf:about="http://www.bricolage.cc<% $story->get_primary_uri %>/">
+  <channel rdf:about="http://www.bricolage.cc<% $story->get_primary_uri %>">
     <title><![CDATA[<% $story->get_title %>]]></title>
-    <link><% $story->get_uri %>/</link>
+    <link><% $story->get_uri %></link>
     <description><![CDATA[<%  $story->get_description || $story->get_title %>]]></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
     <dc:language>en-us</dc:language>
@@ -21,13 +21,13 @@
     <items>
       <rdf:Seq>
 % for my $doc (@docs) {
-        <rdf:li rdf:resource="http://www.bricolage.cc<% $doc->get_primary_uri %>/" />
+        <rdf:li rdf:resource="http://www.bricolage.cc<% $doc->get_primary_uri %>" />
 % }
       </rdf:Seq>
     </items>
   </channel>
 % for my $doc (@docs) {
-%     my $url = 'http://www.bricolage.cc' . $doc->get_primary_uri . '/';
+%     my $url = 'http://www.bricolage.cc' . $doc->get_primary_uri;
 %     my $elem = $doc->get_element;
 %     my $title = $doc->get_title;
 %     # Damn RSS readers don't recognize XHTML in the title. Convert <q> and

@@ -25,10 +25,11 @@ while ($cat =~ s|/[^/]+$||) {
 }
 
 my @archives = Bric::Biz::Asset::Business::Story->list({
-    element_key_name => 'archive',
-    primary_uri      => ANY(@cats),
-    unexpired        => 1,
-    publish_status   => 1,
+    element_key_name  => 'archive',
+    primary_uri       => ANY(@cats),
+    unexpired         => 1,
+    publish_status    => 1,
+    published_version => 1,
 });
 $burner->publish_another($_) for @archives;
 </%cleanup>\

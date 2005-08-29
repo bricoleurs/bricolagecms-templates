@@ -33,7 +33,6 @@ unless ( $type =~ /^image/ ) {
 my $w   = $image->get_element->get_data('width');
 my $alt = encode_entities($element->get_data('alt_text')) || '';
 my $uri = $burner->best_uri($doc)->as_string;
-$uri .= '/' unless $uri eq '/';
 my $tip = encode_entities($element->get_data('tooltip')) || '';
 my $src = $burner->best_uri($image)->as_string;
 my $pos = $element->get_data('position') || 'left';

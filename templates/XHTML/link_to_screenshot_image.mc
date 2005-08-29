@@ -18,7 +18,7 @@ my $h = $selem->get_data('height');
 my $uri = $burner->best_uri($shot)->as_string;
 my $event = $type eq 'PDF' || $type eq 'TIFF'
   ? ''
-  : qq{ onclick="return popup(this, $w, $h)"}; #"
+  : qq{ onclick="return popup(this, $w, $h)"};
 $m->print(qq{                    <li><a href="$uri" title="$tip ($type)"},
           "$event>$type</a></li>\n");
 return;

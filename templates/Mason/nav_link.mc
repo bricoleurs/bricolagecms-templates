@@ -10,7 +10,7 @@ unless ($rel_story) {
 my $tip = encode_entities($element->get_data('tooltip'));
 my $uri = $burner->best_uri($rel_story)->as_string;
 my $text = $element->get_data('link_text') || $rel_story->get_title;
-$m->print(qq{        <li$class><a href="$uri/" title="$tip">$text</a></li>\n});
+$m->print(qq{        <li$class><a href="$uri" title="$tip">$text</a></li>\n});
 $burner->notes(first_nav => 1);
 return;
 </%init>\

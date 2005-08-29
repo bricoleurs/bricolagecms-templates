@@ -9,7 +9,7 @@ unless ($doc) {
 
 my $desc = $element->get_data('description');
 $desc = $desc ? ": $desc" : '';
-$m->print('            <li><a href="', $burner->best_uri($doc)->as_string . '/',
+$m->print('            <li><a href="', $burner->best_uri($doc)->as_string,
           '" title="', encode_entities($element->get_data('tooltip') || ''),
           '">', ($element->get_data('link_text') || $doc->get_title),
           "</a>$desc</li>\n"

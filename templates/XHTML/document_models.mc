@@ -1,6 +1,6 @@
 % $m->comp('/util/xhtml/output_body.mc', %ARGS);
 % for my $model (@models) {
-%     my $uri = $burner->best_uri($model)->as_string . '/';
+%     my $uri = $burner->best_uri($model)->as_string;
           <div class="archiveitem">
             <h2><a href="<% $uri %>" title=""><% $model->get_title %></a></h2>
             <p><% $model->get_description || $model->get_element->get_element->get_description %></p>

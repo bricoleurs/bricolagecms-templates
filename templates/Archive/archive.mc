@@ -1,6 +1,6 @@
 % for my $art (@articles) {
 %     my $elem = $art->get_element;
-%     my $uri = $burner->best_uri($art)->as_string . '/';
+%     my $uri = $burner->best_uri($art)->as_string;
           <div class="archiveitem">
             <h2><a href="<% $uri %>" title=""><% $art->get_title %></a></h2>
             <p class="date"><% $art->get_cover_date('%Y.%m.%d') %></p>

@@ -6,7 +6,7 @@ unless ($doc) {
                        . $element->get_place + 1 . ', ' . $element->get_name);
 }
 $m->comp('/util/xhtml/output_link.mc',
-         url  => $burner->best_uri($doc)->as_string . '/',
+         url  => $burner->best_uri($doc)->as_string,
          text => scalar $element->get_data('link_text')
                  || $doc->get_title,
          tip  => encode_entities($element->get_data('tooltip')),

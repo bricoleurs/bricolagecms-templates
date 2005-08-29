@@ -38,7 +38,7 @@ unless ($log_url) {
 my $md5 = Digest::MD5->new->addfile($download->get_file)->hexdigest;
 
 $m->print(qq{            <li><a href="$uri" title="$tip">$text</a> ($date) },
-          qq{<span class="small">[ <a href="$log_url/">Changelog</a> ] (MD5: $md5)</span></li>\n});
+          qq{<span class="small">[ <a href="$log_url">Changelog</a> ] (MD5: $md5)</span></li>\n});
 return;
 </%init>
 <%once>

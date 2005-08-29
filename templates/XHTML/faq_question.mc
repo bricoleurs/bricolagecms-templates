@@ -20,7 +20,7 @@ for my $ans ($element->get_elements(qw(answer_paragraph answer_code list block_q
 if (my $rel = $element->get_related_story) {
     $m->print(qq{              <p class="more"><a href="},
               $burner->best_uri($rel)->as_string,
-              qq{/" title="}, encode_entities($rel->get_title),
+              qq{" title="}, encode_entities($rel->get_title),
               qq{">Read more</a></p>\n});
 }
 </%perl>
