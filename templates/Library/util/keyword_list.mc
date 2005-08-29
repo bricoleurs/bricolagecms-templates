@@ -98,7 +98,10 @@ my %subs =
                $kw{$k->get_id} = $k;
            }
        }
-       return sort { lc $a->get_sort_name cmp lc $b->get_sort_name }
+       return
+         map  { $_->[0] }
+         sort { $a->[1] cmp $b->[1] }
+         map  { [ $_ => lc $_->get_sort_name] }
          values %kw;
    },
    cats => sub {
