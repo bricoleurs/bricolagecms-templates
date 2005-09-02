@@ -207,7 +207,7 @@ my $count = 0;
 # exclude?
 my %exclude = @related_subs
   ? grep { defined && ++$count }
-    map  { $_->get_related_instance_id }
+    map  { $_->get_related_story_id }
     $element->get_containers(@related_subs)
   : ();
 
