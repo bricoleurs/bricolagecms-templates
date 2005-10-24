@@ -7,11 +7,10 @@ unless ($doc) {
 }
 $m->comp('/util/xhtml/output_link.mc',
          url  => $burner->best_uri($doc)->as_string,
-         text => scalar $element->get_data('link_text')
-                 || $doc->get_title,
+         text => $element->get_data('link_text') || $doc->get_title,
          tip  => encode_entities($element->get_data('tooltip')),
-         teas => scalar $element->get_data('teaser')
-                 || scalar $doc->get_element->get_data('teaser'),
+         teas => $element->get_data('teaser')
+                 || $doc->get_element->get_data('teaser'),
          date => $doc->is_fixed ? undef : $doc->get_cover_date('%Y.%m.%d'),
 );
 return;

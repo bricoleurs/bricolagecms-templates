@@ -17,7 +17,7 @@
       <div id="columns">
         <div id="body">
           <h1><% $story->get_title %></h1>
-          <p><% $story->get_description || $story->get_element->get_element->get_description %></p>
+          <p><% $story->get_description || $story->get_element->get_element_type->get_description %></p>
 % $m->comp('/util/xhtml/introspect.mc', full_page => 0, include_css => 0);
           <div id="pagenav">
            <p id="pagenext"><a href="/about/doc_models/" title="">More Document Models</a></p>

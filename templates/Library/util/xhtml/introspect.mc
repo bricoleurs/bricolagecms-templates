@@ -195,18 +195,18 @@ USA.
   <body>
 % }
     <div id="docmodel">
-% my $elem = $element->get_element;
+% my $elem_type = $element->get_element_type;
 % if ($include_toc) {
       <div class="toc">
         <h2>Element Table of Contents</h2>
         <ul>
-%     $m->comp('.toc', elem => $elem);
+%     $m->comp('.toc', elem => $elem_type);
         </ul>
       </div>
 %     %seen = ();
 % }
       <h2>Docment Model</h2>
-% $m->comp('.element', elem => $elem);
+% $m->comp('.element', elem => $elem_type);
     </div>
 % if ($full_page) {
   </body>
@@ -225,15 +225,15 @@ my %seen;
 </%shared>\
 <%def .toc>\
 <%args>
-$elem
+$elem_type
 $no_nest => 0
 $level   => 1
 </%args>\
 <%perl>;
-my $kn = $elem->get_key_name;
+my $kn = $elem_type->get_key_name;
 $seen{$kn}++;
-$m->print(qq{        <li><a href="#$kn$level">}, $elem->get_name, "</a>");
-my @subs = $elem->get_containers
+$m->print(qq{        <li><a href="#$kn$level">}, $elem_type->get_name, "</a>");
+my @subs = $elem_type->get_containers
  or $m->print("</li>\n"), return;
 my $kn1 = $subs[0]->get_key_name;
 if ($seen{$kn} > 1 || (@subs == 1 && $no_nest && $kn1 eq $kn)) {
@@ -256,43 +256,43 @@ $m->print(qq{          </ul>\n        </li>\n});
 </%def>\
 <%def .element>\
 <%args>
-$elem
+$elem_type
 $level   => 1
 $no_nest => 0
 </%args>\
-% my $kn = $elem->get_key_name;
+% my $kn = $elem_type->get_key_name;
 % $seen{$kn}++;
 % my @keys = qw(type value length size);
     <div class="element level<% $level %>" id="<% $kn . $level %>">
-      <h1><% $elem->get_name %></h1>
+      <h1><% $elem_type->get_name %></h1>
       <dl>
         <dt>Key Name</dt>
         <dd><% $kn %></dd>
         <dt>Type</dt>
-        <dd><% $elem->get_type_name %></dd>
+        <dd><% $elem_type->get_type_name %></dd>
         <dt>Paginated</dt>
-        <dd><% $elem->get_paginated ? 'Yes' : 'No' %></dd>
+        <dd><% $elem_type->get_paginated ? 'Yes' : 'No' %></dd>
         <dt>Related Media</dt>
-        <dd><% $elem->is_related_media ? 'Yes' : 'No' %></dd>
+        <dd><% $elem_type->is_related_media ? 'Yes' : 'No' %></dd>
         <dt>Related Story</dt>
-        <dd><% $elem->is_related_story ? 'Yes' : 'No' %></dd>
-% if ($elem->get_top_level) {
+        <dd><% $elem_type->is_related_story ? 'Yes' : 'No' %></dd>
+% if ($elem_type->get_top_level) {
         <dt>Fixed URL</dt>
-        <dd><% $elem->get_fixed_url ? 'Yes' : 'No' %></dd>
+        <dd><% $elem_type->get_fixed_url ? 'Yes' : 'No' %></dd>
 % }
         <dt>Description</dt>
-        <dd><% $elem->get_description || '&nbsp;' %></dd>
+        <dd><% $elem_type->get_description || '&nbsp;' %></dd>
       </dl>
-% if ($elem->get_top_level) {
+% if ($elem_type->get_top_level) {
       <h2>Sites &amp; Output Channels</h2>
       <table class="sites">
         <tr>
           <th>Site</th>
           <th>Output Channels</th>
         </tr>
-% my %ocs; push @{$ocs{$_->get_site_id}}, $_ for $elem->get_output_channels;
-%     for my $site ($elem->get_sites) {
-%         my $prim = $elem->get_primary_oc_id($site->get_id);
+% my %ocs; push @{$ocs{$_->get_site_id}}, $_ for $elem_type->get_output_channels;
+%     for my $site ($elem_type->get_sites) {
+%         my $prim = $elem_type->get_primary_oc_id($site->get_id);
         <tr>
           <td><% $site->get_name %></td>
           <td>
@@ -309,7 +309,7 @@ $no_nest => 0
 %     }
       </table>
 % }
-% if (my @fields = $elem->get_data) {
+% if (my @fields = $elem_type->get_data) {
       <h2>Fields</h2>
       <table class="fields">
         <tr>
@@ -354,7 +354,7 @@ $no_nest => 0
       </table>
 % }
 <%perl>;
-if (my @subs = $elem->get_containers) {
+if (my @subs = $elem_type->get_containers) {
     my $kn1 = $subs[0]->get_key_name;
     unless ($seen{$kn} > 1 || (@subs == 1 && $no_nest && $kn1 eq $kn)) {
         $m->print("      <h2>Subelements</h2>\n");

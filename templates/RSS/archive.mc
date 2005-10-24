@@ -1,6 +1,6 @@
 <%perl>;
 my $cat = $burner->get_cat->get_uri;
-$cat = undef if $cat eq '/archive';
+$cat = undef if $cat eq '/archive/';
 $m->comp('/util/xml/output_rss_feed.mc',
          title => 'Bricolage News',
          docs  => scalar $m->comp('/util/archive_list.mc',

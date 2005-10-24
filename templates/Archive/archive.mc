@@ -24,7 +24,7 @@ my $limit = 25;
 <%init>;
 my $offset = $burner->notes('last_offset') || 0;
 my $cat = $burner->get_cat->get_uri;
-$cat = undef if $cat eq '/archive';
+$cat = undef if $cat eq '/archive/';
 my @articles = $m->comp(
     '/util/archive_list.mc',
     offset   => $offset,

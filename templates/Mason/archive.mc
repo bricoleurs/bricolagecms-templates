@@ -2,7 +2,7 @@
           <dl>
 <%perl>;
 my $cat = $burner->get_cat->get_uri;
-$cat = undef if $cat eq '/archive';
+$cat = undef if $cat eq '/archive/';
 for my $art ($m->comp('/util/archive_list.mc', category => $cat)) {
     my $elem = $art->get_element;
     $m->comp('/util/xhtml/output_link.mc',

@@ -19,8 +19,8 @@ unless ($story->get_publish_status) {
 # We need to look up all the archives in /archive, the current category, and
 # the parent categories of the current category.
 my $cat = $burner->get_cat->get_uri;
-my @cats = ('/archive', $cat, '/');
-while ($cat =~ s|/[^/]+$||) {
+my @cats = ('/archive/', $cat);
+while ($cat =~ s|[^/]+/$||) {
     push @cats, $cat;
 }
 
