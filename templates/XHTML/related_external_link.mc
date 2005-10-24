@@ -10,7 +10,7 @@ $m->comp('/util/xhtml/output_link.mc',
          url  => $url,
          text => $title,
          tip  => encode_entities($element->get_data('tooltip')),
-         teas => scalar $element->get_data('teaser')
+         teas => $element->get_data('teaser')
 );
 return;
 </%perl>\

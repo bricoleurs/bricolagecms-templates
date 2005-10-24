@@ -24,7 +24,7 @@ my %labels = (
 );
 </%once>\
 <%init>;
-my %img = map { scalar $_->get_data('type') => $_ }
+my %img = map { $_->get_data('type') => $_ }
   $element->get_elements('link_to_screenshot_image');
 
 unless ($img{thumb} && $img{full}) {
