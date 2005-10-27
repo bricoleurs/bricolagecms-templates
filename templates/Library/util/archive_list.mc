@@ -7,7 +7,7 @@ $category => undef
 my $developers_source_id = 1;
 </%once>\
 <%init>;
-return Bric::Biz::Asset::Business::Story->list({
+return scalar Bric::Biz::Asset::Business::Story->list({
     element_key_name => 'article',
     Order            => 'cover_date',
     OrderDirection   => 'DESC',

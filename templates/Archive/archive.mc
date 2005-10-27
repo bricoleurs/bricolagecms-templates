@@ -1,4 +1,4 @@
-% for my $art (@articles) {
+% for my $art (@$articles) {
 %     my $elem = $art->get_element;
 %     my $uri = $burner->best_uri($art)->as_string;
           <div class="archiveitem">
@@ -25,7 +25,7 @@ my $limit = 25;
 my $offset = $burner->notes('last_offset') || 0;
 my $cat = $burner->get_cat->get_uri;
 $cat = undef if $cat eq '/archive/';
-my @articles = $m->comp(
+my $articles = $m->comp(
     '/util/archive_list.mc',
     offset   => $offset,
     limit    => $limit,
@@ -33,7 +33,7 @@ my @articles = $m->comp(
 );
 my $prev = $burner->prev_page_file;
 my $next;
-if (@articles >= $limit) {
+if (@$articles >= $limit) {
     # Set it up to burn another page.
     $burner->notes(last_offset => $offset + $limit);
     $burner->set_burn_again(1);
