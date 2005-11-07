@@ -9,7 +9,7 @@
 <%init>;
 my @models = Bric::Biz::Asset::Business::Story->list({
     Order            => 'title',
-    unexired         => 1,
+    unexpired        => 1,
     primary_uri      => '/about/doc_models/%',
     # Are we publishing?
     ( $burner->get_mode == PUBLISH_MODE
