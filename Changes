@@ -1,7 +1,7 @@
 Revision history for bricolage.cc Templates & Element Types
 ===========================================================
 
-1.21
+1.21  2006-02-01T23:34:15
       - Fixed contributor_list.mc to properly default to sorting on full
         names.
       - Replaced calls to Apache::Util::escape_html() (which doesn't work

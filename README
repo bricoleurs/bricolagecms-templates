@@ -1,13 +1,13 @@
-bricolage.cc Templates & Elements 1.21
-======================================
+bricolage.cc Templates & Element Types 1.21
+===========================================
 
-This package contains all of the templates, element type definitions, and
-element definitions (the latter two in XML, exported from the Bricolage SOAP
-server) for the bricolage.cc Web site. It's not meant for direct import into
-an existing Bricolage server, although it is possible to peform such a direct
-import by modifying the Bricolage server and the "element_types.xml" and
-"elements.xml" files. To do so, you must set up the following output channels
-(or modify "elements.xml" to a similar model):
+This package contains all of the templates and element type definitions (the
+latter in XML, exported from the Bricolage SOAP server) for the bricolage.cc
+Web site. It's not meant for direct import into an existing Bricolage server,
+although it is possible to peform such a direct import by modifying the
+Bricolage server and the "element_types.xml" file. To do so, you must set up
+the following output channels (or modify "element_types.xml" to a similar
+model):
 
 Output Channel     Includes
 -----------------  ---------------
@@ -19,36 +19,22 @@ RSS                Library
 Mason              Library
 Introspect         Library
 
-You must also set up the following Element Types:
-
-  * Subelement
-  * Related Story
-  * Related Media and Story
-  * Related Media
-  * Fixed Document
-  * Document
-  * Image
-  * Fixed Image
-  * Fixed Files
-  * Audio
-
-Or, if you've installed Bricolage from "trunk" branch of the Subversion
-repository, you can simply use the element_types.xml file to create these
-element types.
+Then you can simply use the element_types.xml file to create these element
+types.
 
 To get the templates to properly execute, make sure that the PERL_LOADER
 bricolage.conf directive loads HTML::Entities and the burner mode constants:
 
   PERL_LOADER = use HTML::Entities; use Bric::Util::Burner qw(:modes);
 
-And finally, You will need to modify the site tag in elements.xml. Consult the
-Bricolage Website and documentation for details.
+And finally, You will need to modify the site tag in element_types.xml.
+Consult the Bricolage Website and documentation for details.
 
   http://www.bricolage.cc/
 
 Copyright & License
 -------------------
-Copyright (c) 2004-2005 by David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2006 by David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
