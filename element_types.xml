@@ -1,167 +1,3208 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <assets xmlns="http://bricolage.sourceforge.net/assets.xsd">
- <element_type id="1">
-  <name>Document</name>
-  <description>Document stories.</description>
-  <top_level>1</top_level>
+ <element_type id="7">
+  <key_name>pull_quote</key_name>
+  <name>Pull Quote</name>
+  <description>A pull quote element</description>
+  <top_level>0</top_level>
   <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
+  <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
   <related_media>0</related_media>
   <is_media>0</is_media>
   <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
   <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>attribution</key_name>
+    <name>Attribution</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>position</key_name>
+    <name>Position</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>left,Left
+right,Right
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
  </element_type>
- <element_type id="2">
-  <name>Image</name>
-  <description>Images</description>
-  <top_level>1</top_level>
-  <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
-  <related_story>0</related_story>
-  <related_media>0</related_media>
-  <is_media>1</is_media>
-  <biz_class>Bric::Biz::Asset::Business::Media::Image</biz_class>
-  <active>1</active>
- </element_type>
- <element_type id="3">
-  <name>Subelement</name>
-  <description>General Subelements.</description>
+ <element_type id="1025">
+  <key_name>faq_question</key_name>
+  <name>FAQ Question</name>
+  <description>A single FAQ question and its answer.</description>
   <top_level>0</top_level>
   <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
-  <related_story>0</related_story>
-  <related_media>0</related_media>
-  <is_media>0</is_media>
-  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
-  <active>1</active>
- </element_type>
- <element_type id="4">
-  <name>Related Story</name>
-  <description>Related story elements.</description>
-  <top_level>0</top_level>
-  <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
+  <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
   <related_media>0</related_media>
   <is_media>0</is_media>
   <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
   <active>1</active>
- </element_type>
- <element_type id="5">
-  <name>Page</name>
-  <description>Page elements.</description>
   <top_level>0</top_level>
-  <paginated>1</paginated>
-  <fixed_url>0</fixed_url>
+  <subelement_types>
+   <subelement_type>block_quote</subelement_type>
+   <subelement_type>list</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>question_paragraph</key_name>
+    <name>Question Paragraph</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>answer_paragraph</key_name>
+    <name>Answer Paragraph</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>answer_code</key_name>
+    <name>Answer Code</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1026">
+  <key_name>faq_section</key_name>
+  <name>FAQ Section</name>
+  <description>A section of an FAQ.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
   <related_media>0</related_media>
   <is_media>0</is_media>
   <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
   <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types>
+   <subelement_type>faq_question</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
  </element_type>
- <element_type id="6">
-  <name>Related Media</name>
-  <description>Related Media Elements</description>
+ <element_type id="1027">
+  <key_name>link_to_download</key_name>
+  <name>Link to Download</name>
+  <description>Link to a file to download.</description>
   <top_level>0</top_level>
   <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
+  <fixed_uri>0</fixed_uri>
+  <related_story>1</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>changelog_url</key_name>
+    <name>Changelog URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>release_date</key_name>
+    <name>Release Date</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>date</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1028">
+  <key_name>link_to_screenshot_image</key_name>
+  <name>Link to Screenshot Image</name>
+  <description>A link to an image used in a screenshot.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
   <related_media>1</related_media>
   <is_media>0</is_media>
   <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
   <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>type</key_name>
+    <name>Type</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>thumb,Thumb
+half,Half,
+full,Full
+tiff,TIFF
+pdf,PDF
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
  </element_type>
- <element_type id="7">
-  <name>Fixed Document</name>
-  <description>Fixed documents.</description>
-  <top_level>1</top_level>
+ <element_type id="1030">
+  <key_name>nav_link</key_name>
+  <name>Nav Link</name>
+  <description>Link to a document used for the site nav bar.</description>
+  <top_level>0</top_level>
   <paginated>0</paginated>
-  <fixed_url>1</fixed_url>
+  <fixed_uri>0</fixed_uri>
+  <related_story>1</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1031">
+  <key_name>external_nav_link</key_name>
+  <name>External Nav Link</name>
+  <description>Link to an external URL used in the nav bar.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
   <related_media>0</related_media>
   <is_media>0</is_media>
   <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
   <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>url</key_name>
+    <name>URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
  </element_type>
- <element_type id="1024">
-  <name>Fixed Image</name>
-  <description>Fixed images.</description>
+ <element_type id="1032">
+  <key_name>nav_menu_item</key_name>
+  <name>Nav Menu Item</name>
+  <description>A single nav menu and its submenus.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>1</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types>
+   <subelement_type>external_nav_link</subelement_type>
+   <subelement_type>nav_link</subelement_type>
+   <subelement_type>nav_menu_item</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1033">
+  <key_name>list</key_name>
+  <name>List</name>
+  <description>An ordered or unordered list.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types>
+   <subelement_type>external_link_item</subelement_type>
+   <subelement_type>link_to_document_item</subelement_type>
+   <subelement_type>list</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>type</key_name>
+    <name>Type</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>ul,Unordered
+ol,Ordered
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>item</key_name>
+    <name>Item</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>code</key_name>
+    <name>Code</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>5</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1034">
+  <key_name>related_audio</key_name>
+  <name>Related Audio</name>
+  <description>Relates an audio file to the document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>position</key_name>
+    <name>Position</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>left,Left
+right,Right
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>caption</key_name>
+    <name>Caption</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>5</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1035">
+  <key_name>related_image</key_name>
+  <name>Related Image</name>
+  <description>Relates an image to the document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>alt_text</key_name>
+    <name>Alt Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>position</key_name>
+    <name>Position</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>left,Left
+right,Right
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>caption</key_name>
+    <name>Caption</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1036">
+  <key_name>related_links</key_name>
+  <name>Related Links</name>
+  <description>Links to related stories.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types>
+   <subelement_type>related_document_link</subelement_type>
+   <subelement_type>related_external_link</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1037">
+  <key_name>screenshot</key_name>
+  <name>Screenshot</name>
+  <description>A screenshot.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types>
+   <subelement_type>link_to_screenshot_image</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>title</key_name>
+    <name>Title</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>alt_text</key_name>
+    <name>Alt Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>description</key_name>
+    <name>Description</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1038">
+  <key_name>archive</key_name>
+  <name>Archive</name>
+  <description>Archive of all stories on the site or in a category and all of its subcategories.</description>
   <top_level>1</top_level>
   <paginated>0</paginated>
-  <fixed_url>1</fixed_url>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="Archive">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Archive</output_channel>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">Mason</output_channel>
+   <output_channel site="bricolage.cc">RSS</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types></field_types>
+ </element_type>
+ <element_type id="1039">
+  <key_name>downloads</key_name>
+  <name>Downloads</name>
+  <description>The site downloads page.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>download_branch</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1040">
+  <key_name>faq</key_name>
+  <name>FAQ</name>
+  <description>Frequently asked questions.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>faq_section</subelement_type>
+  </subelement_types>
+  <field_types></field_types>
+ </element_type>
+ <element_type id="1041">
+  <key_name>home_page</key_name>
+  <name>Home Page</name>
+  <description>Site home page.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>download_shortcut</subelement_type>
+   <subelement_type>list</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1042">
+  <key_name>screenshots</key_name>
+  <name>Screenshots</name>
+  <description>Screenshots.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>screenshot</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision>5</precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1043">
+  <key_name>fixed_document</key_name>
+  <name>Fixed Document</name>
+  <description>Fixed location document.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>block_quote</subelement_type>
+   <subelement_type>download_shortcut</subelement_type>
+   <subelement_type>external_link_button</subelement_type>
+   <subelement_type>list</subelement_type>
+   <subelement_type>pull_quote</subelement_type>
+   <subelement_type>related_audio</subelement_type>
+   <subelement_type>related_document_button</subelement_type>
+   <subelement_type>related_image</subelement_type>
+   <subelement_type>related_links</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>teaser</key_name>
+    <name>Teaser</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>code</key_name>
+    <name>Code</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>5</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1044">
+  <key_name>article</key_name>
+  <name>Article</name>
+  <description>Dated article.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>block_quote</subelement_type>
+   <subelement_type>download_shortcut</subelement_type>
+   <subelement_type>list</subelement_type>
+   <subelement_type>pull_quote</subelement_type>
+   <subelement_type>related_audio</subelement_type>
+   <subelement_type>related_image</subelement_type>
+   <subelement_type>related_links</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>teaser</key_name>
+    <name>Teaser</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>long_teaser</key_name>
+    <name>Long Teaser</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>5</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>code</key_name>
+    <name>Code</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>6</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1045">
+  <key_name>nav_menu</key_name>
+  <name>Nav Menu</name>
+  <description>Site navigation menu.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="Mason">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">Mason</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>external_nav_link</subelement_type>
+   <subelement_type>nav_link</subelement_type>
+   <subelement_type>nav_menu_item</subelement_type>
+  </subelement_types>
+  <field_types></field_types>
+ </element_type>
+ <element_type id="1046">
+  <key_name>image</key_name>
+  <name>Image</name>
+  <description>An image file.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
   <related_media>0</related_media>
   <is_media>1</is_media>
   <biz_class>Bric::Biz::Asset::Business::Media::Image</biz_class>
   <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>caption</key_name>
+    <name>Caption</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>width</key_name>
+    <name>Width</name>
+    <description>Autopopulated Width field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>color_type</key_name>
+    <name>Color Type</name>
+    <description>Autopopulated Color Type field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>resolution</key_name>
+    <name>Resolution</name>
+    <description>Autopopulated Resolution field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>4</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>compression</key_name>
+    <name>Compression</name>
+    <description>Autopopulated Compression field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>5</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>height</key_name>
+    <name>Height</name>
+    <description>Autopopulated Height field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>6</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
  </element_type>
- <element_type id="1025">
-  <name>Audio</name>
-  <description>Audio files.</description>
+ <element_type id="1047">
+  <key_name>fixed_image</key_name>
+  <name>Fixed Image</name>
+  <description>Fixed location image file.</description>
   <top_level>1</top_level>
   <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>1</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Media::Image</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>caption</key_name>
+    <name>Caption</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>compression</key_name>
+    <name>Compression</name>
+    <description>Autopopulated Compression field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>width</key_name>
+    <name>Width</name>
+    <description>Autopopulated Width field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>resolution</key_name>
+    <name>Resolution</name>
+    <description>Autopopulated Resolution field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>4</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>color_type</key_name>
+    <name>Color Type</name>
+    <description>Autopopulated Color Type field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>5</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>height</key_name>
+    <name>Height</name>
+    <description>Autopopulated Height field.</description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>1</autopopulated>
+    <place>6</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1048">
+  <key_name>static_file</key_name>
+  <name>Static File</name>
+  <description>CSS, JavaScript, SSI, etc.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>1</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Media</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types></field_types>
+ </element_type>
+ <element_type id="1049">
+  <key_name>audio</key_name>
+  <name>Audio</name>
+  <description>Audio file.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
   <related_media>0</related_media>
   <is_media>1</is_media>
   <biz_class>Bric::Biz::Asset::Business::Media::Audio</biz_class>
   <active>1</active>
- </element_type>
- <element_type id="1026">
-  <name>Other Media</name>
-  <description>Other media files.</description>
   <top_level>1</top_level>
-  <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
-  <related_story>0</related_story>
-  <related_media>0</related_media>
-  <is_media>1</is_media>
-  <biz_class>Bric::Biz::Asset::Business::Media</biz_class>
-  <active>1</active>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types></field_types>
  </element_type>
- <element_type id="1027">
-  <name>Fixed Files</name>
-  <description>CSS, JS, SSIs, etc.</description>
-  <top_level>1</top_level>
-  <paginated>0</paginated>
-  <fixed_url>1</fixed_url>
-  <related_story>0</related_story>
-  <related_media>0</related_media>
-  <is_media>1</is_media>
-  <biz_class>Bric::Biz::Asset::Business::Media</biz_class>
-  <active>1</active>
- </element_type>
- <element_type id="1028">
-  <name>Related Media and Story</name>
-  <description>Elements that relate to a media document and to a story document.</description>
+ <element_type id="1050">
+  <key_name>download_shortcut</key_name>
+  <name>Download Shortcut</name>
+  <description>A simple link to a downloadable file.</description>
   <top_level>0</top_level>
   <paginated>0</paginated>
-  <fixed_url>0</fixed_url>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>description</key_name>
+    <name>Description</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1051">
+  <key_name>download_branch</key_name>
+  <name>Download Branch</name>
+  <description>A download branch, with links to all the releases in the branch.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types>
+   <subelement_type>link_to_download</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>name</key_name>
+    <name>Name</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1052">
+  <key_name>related_document_link</key_name>
+  <name>Related Document Link</name>
+  <description>Link to a story document related to the current document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>1</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>teaser</key_name>
+    <name>Teaser</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1053">
+  <key_name>related_external_link</key_name>
+  <name>Related External Link</name>
+  <description>Link to an external URL that's related to the current document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>url</key_name>
+    <name>URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>teaser</key_name>
+    <name>Teaser</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1054">
+  <key_name>personal_profile</key_name>
+  <name>Personal Profile</name>
+  <description>The profile of data about a person, such as a Bricolage developer.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>name</key_name>
+    <name>Name</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>email</key_name>
+    <name>Email</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>site_name</key_name>
+    <name>Site Name</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>site_url</key_name>
+    <name>Site URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>irc_nick</key_name>
+    <name>IRC Nick</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>5</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>location</key_name>
+    <name>Location</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>6</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>responsibilities</key_name>
+    <name>Responsibilities</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>7</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>bio</key_name>
+    <name>Bio</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>8</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1055">
+  <key_name>roster</key_name>
+  <name>Roster</name>
+  <description>List of personal profiles of people involved in the project.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>personal_profile</subelement_type>
+  </subelement_types>
+  <field_types></field_types>
+ </element_type>
+ <element_type id="1057">
+  <key_name>site_profile</key_name>
+  <name>Site Profile</name>
+  <description>The profile of a site powered by Bricolage</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>name</key_name>
+    <name>Name</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>site_url</key_name>
+    <name>Site URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>description</key_name>
+    <name>Description</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1060">
+  <key_name>sites</key_name>
+  <name>Sites</name>
+  <description>List of sites powered by Bricolage</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>site_profile</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1061">
+  <key_name>mailing_list</key_name>
+  <name>Mailing List</name>
+  <description>Information about a mailing list</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>list_name</key_name>
+    <name>List Name</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>list_url</key_name>
+    <name>List URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>archive_url</key_name>
+    <name>Archive URL</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>description</key_name>
+    <name>Description</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1062">
+  <key_name>mailing_lists</key_name>
+  <name>Mailing Lists</name>
+  <description>A list of mailing lists.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>mailing_list</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>para</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1063">
+  <key_name>download</key_name>
+  <name>Download</name>
+  <description>Downloadable files, such as a release of Bricolage.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>1</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Media</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types></field_types>
+ </element_type>
+ <element_type id="1064">
+  <key_name>changes</key_name>
+  <name>Changes</name>
+  <description>List of changes in a Bricolage release.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="Slugged XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">Slugged XHTML</output_channel>
+  </output_channels>
+  <subelement_types>
+   <subelement_type>download_shortcut</subelement_type>
+   <subelement_type>list</subelement_type>
+  </subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>header</key_name>
+    <name>Header</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>subheader</key_name>
+    <name>Subheader</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1065">
+  <key_name>link_to_document_item</key_name>
+  <name>Link to Document Item</name>
+  <description>List item link to another Bricolage document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>1</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>description</key_name>
+    <name>Description</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1066">
+  <key_name>external_link_item</key_name>
+  <name>External Link Item</name>
+  <description>List item link to a URL not managed in Bricolage.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>url</key_name>
+    <name>URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>link_text</key_name>
+    <name>Link Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>description</key_name>
+    <name>Description</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1068">
+  <key_name>block_quote</key_name>
+  <name>Block Quote</name>
+  <description>Inline extended quotation.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>attribution</key_name>
+    <name>Attribution</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1069">
+  <key_name>external_link_button</key_name>
+  <name>External Link Button</name>
+  <description>An image that links to URL.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>1</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>alt_text</key_name>
+    <name>Alt Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>url</key_name>
+    <name>URL</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>position</key_name>
+    <name>Position</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>4</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>left,Left
+right,Right
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1070">
+  <key_name>related_document_button</key_name>
+  <name>Related Document Button</name>
+  <description>Outputs an image as link to another document.</description>
+  <top_level>0</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
   <related_media>1</related_media>
   <is_media>0</is_media>
   <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
   <active>1</active>
+  <top_level>0</top_level>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>alt_text</key_name>
+    <name>Alt Text</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>tooltip</key_name>
+    <name>Tooltip</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>2</place>
+    <widget_type>text</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>32</length>
+    <max_size>0</max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+   <field_type>
+    <key_name>position</key_name>
+    <name>Position</name>
+    <description></description>
+    <required>1</required>
+    <repeatable>0</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>3</place>
+    <widget_type>select</widget_type>
+    <default_val></default_val>
+    <options>left,Left
+right,Right
+</options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size></max_size>
+    <rows>0</rows>
+    <cols>0</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
+ </element_type>
+ <element_type id="1071">
+  <key_name>document_models</key_name>
+  <name>Document Models</name>
+  <description>For the creation of a list of document models.</description>
+  <top_level>1</top_level>
+  <paginated>0</paginated>
+  <fixed_uri>1</fixed_uri>
+  <related_story>0</related_story>
+  <related_media>0</related_media>
+  <is_media>0</is_media>
+  <biz_class>Bric::Biz::Asset::Business::Story</biz_class>
+  <active>1</active>
+  <top_level>1</top_level>
+  <sites>
+   <site primary_oc="XHTML">bricolage.cc</site>
+  </sites>
+  <output_channels>
+   <output_channel site="bricolage.cc">Introspect</output_channel>
+   <output_channel site="bricolage.cc">XHTML</output_channel>
+  </output_channels>
+  <subelement_types></subelement_types>
+  <field_types>
+   <field_type>
+    <key_name>paragraph</key_name>
+    <name>Paragraph</name>
+    <description></description>
+    <required>0</required>
+    <repeatable>1</repeatable>
+    <autopopulated>0</autopopulated>
+    <place>1</place>
+    <widget_type>textarea</widget_type>
+    <default_val></default_val>
+    <options></options>
+    <multiple>0</multiple>
+    <length>0</length>
+    <max_size>0</max_size>
+    <rows>4</rows>
+    <cols>40</cols>
+    <precision></precision>
+    <active>1</active>
+   </field_type>
+  </field_types>
  </element_type>
 </assets>
-<!--
-
-Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
-
-This library is free software; you can redistribute it and/or modify it under
-the terms of the GNU Lesser General Public License as published by the Free
-Software Foundation, version 2.1 of the License.
-
-This library is distributed in the hope that it will be useful, but WITHOUT
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
-details.
-
-You should have received a copy of the GNU Lesser General Public License along
-with this library (see the the license.txt file); if not, write to the Free
-Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
-USA.
-
--->
