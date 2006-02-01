@@ -1,5 +1,5 @@
-Revision history for bricolage.cc Templates & Elements
-======================================================
+Revision history for bricolage.cc Templates & Element Types
+===========================================================
 
 1.21
       - Fixed contributor_list.mc to properly default to sorting on full
@@ -24,6 +24,8 @@ Revision history for bricolage.cc Templates & Elements
         keywords in the keyword_list.mc template.
       - Templates no longer add a trailing slash to URIs, since all URIs in
         Bricolage and newer will include the slash.
+      - Added paragraph field to the Screenshots element type and template.
+      - Updated all templates for compatibility with Bricolage 1.10.
 
 1.20  2005-01-10T23:38:25
       - Modified the archive lookup template to look up only article documents

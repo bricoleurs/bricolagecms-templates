@@ -3,7 +3,7 @@
 %     my $uri = $burner->best_uri($model)->as_string;
           <div class="archiveitem">
             <h2><a href="<% $uri %>" title=""><% $model->get_title %></a></h2>
-            <p><% $model->get_description || $model->get_element->get_element->get_description %></p>
+            <p><% $model->get_description || $model->get_element->get_element_type->get_description %></p>
           </div>
 % }
 <%init>;
@@ -35,7 +35,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

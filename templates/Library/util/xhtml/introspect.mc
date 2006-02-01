@@ -6,7 +6,7 @@ introspect.mc - Outputs a graphical representation of a story type element tree
 
 =head1 Version
 
-1.1
+1.2
 
 =head1 Synopsis
 
@@ -14,24 +14,25 @@ introspect.mc - Outputs a graphical representation of a story type element tree
 
 =head1 Description
 
-This template outputs a graphical representation of the element structure of a
-story type element. To see examples of its output, visit
+This template outputs a graphical representation of the element type structure
+of a story type element. To see examples of its output, visit
 L<http://www.bricolage.cc/about/doc_models/> on the Bricolage Website.
 
-To use this template, simply create a template for your story type element,
+To use this template, simply create a template for your story element type,
 have it execute this template, and you're done. Create a new document for the
-story type element and preview it.
+story element type and preview it.
 
 The output is XHTML 1.1, containing a series of embedded C<< <div> >>s, each
-representing a single element in the element tree. Each contains data about
-the element, any fields and any subelements, as well as metadata about the
-element itself (name, key name, related story, etc.). The story type element
-itself also includes a list of associated sites and output channels.
+representing a single element type in the element type tree. Each contains
+data about the element type, any fields and any subelement types, as well as
+metadata about the element type itself (name, key name, related story, etc.).
+The story element type itself also includes a list of associated sites and
+output channels.
 
-This template is smart enough to correctly handle recursive elements. It also
-has embedded CSS to make the whole thing look nice, with colors to distinguish
-up to ten levels of the element tree. Patches to make it look even nicer are
-warmly welcomed.
+This template is smart enough to correctly handle recursive element types. It
+also has embedded CSS to make the whole thing look nice, with colors to
+distinguish up to ten levels of the element type tree. Patches to make it look
+even nicer are warmly welcomed.
 
 =head1 Parameters
 
@@ -58,13 +59,13 @@ its default CSS. True by default.
   $m->comp('/util/xhtml/introspect.mc', include_toc => 0);
 
 Pass a false value to this parameter to prevent the template from outtputing a
-nested table of contents of all of the elements in the document model.
+nested table of contents of all of the element types in the document model.
 
 =head1 Prerequisites
 
 =over 4
 
-=item Bricolage 1.8
+=item Bricolage 1.10
 
 =back
 
@@ -74,7 +75,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2004-2005 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
@@ -200,13 +201,13 @@ USA.
       <div class="toc">
         <h2>Element Table of Contents</h2>
         <ul>
-%     $m->comp('.toc', elem => $elem_type);
+%     $m->comp('.toc', elem_type => $elem_type);
         </ul>
       </div>
 %     %seen = ();
 % }
       <h2>Docment Model</h2>
-% $m->comp('.element', elem => $elem_type);
+% $m->comp('.element', elem_type => $elem_type);
     </div>
 % if ($full_page) {
   </body>
@@ -246,9 +247,9 @@ for my $sub (@subs) {
     my $nest = $subkn eq $kn;
     next if $seen{$subkn} > 1 || ($nest && $no_nest);
     $m->comp('.toc',
-        elem => $sub,
-        level   => $level + 1,
-        no_nest => $nest
+        elem_type => $sub,
+        level     => $level + 1,
+        no_nest   => $nest
     );
 }
 $m->print(qq{          </ul>\n        </li>\n});
@@ -262,7 +263,6 @@ $no_nest => 0
 </%args>\
 % my $kn = $elem_type->get_key_name;
 % $seen{$kn}++;
-% my @keys = qw(type value length size);
     <div class="element level<% $level %>" id="<% $kn . $level %>">
       <h1><% $elem_type->get_name %></h1>
       <dl>
@@ -271,19 +271,19 @@ $no_nest => 0
         <dt>Type</dt>
         <dd><% $elem_type->get_type_name %></dd>
         <dt>Paginated</dt>
-        <dd><% $elem_type->get_paginated ? 'Yes' : 'No' %></dd>
+        <dd><% $elem_type->is_paginated ? 'Yes' : 'No' %></dd>
         <dt>Related Media</dt>
         <dd><% $elem_type->is_related_media ? 'Yes' : 'No' %></dd>
         <dt>Related Story</dt>
         <dd><% $elem_type->is_related_story ? 'Yes' : 'No' %></dd>
-% if ($elem_type->get_top_level) {
-        <dt>Fixed URL</dt>
-        <dd><% $elem_type->get_fixed_url ? 'Yes' : 'No' %></dd>
+% if ($elem_type->is_top_level) {
+        <dt>Fixed URI</dt>
+        <dd><% $elem_type->is_fixed_uri ? 'Yes' : 'No' %></dd>
 % }
         <dt>Description</dt>
         <dd><% $elem_type->get_description || '&nbsp;' %></dd>
       </dl>
-% if ($elem_type->get_top_level) {
+% if ($elem_type->is_top_level) {
       <h2>Sites &amp; Output Channels</h2>
       <table class="sites">
         <tr>
@@ -316,28 +316,24 @@ $no_nest => 0
           <th>Place</th>
           <th>Key Name</th>
           <th>Label</th>
-%     for my $key (@keys) {
-          <th><% $key eq 'value' ? 'Default' : ucfirst $key %></th>
-%     }
+          <th>Widget</th>
+          <th>Default</th>
+          <th>Length</th>
           <th>Max Length</th>
           <th>Required</th>
           <th>Values</th>
         </tr>
 %     for my $field (@fields) {
-%         my $vals = $field->get_meta($meta, 'vals');
         <tr>
           <td><% $field->get_place %></td>
           <td><% $field->get_key_name %></td>
-          <td><% $field->get_meta($meta, 'disp') %></td>
-%         for my $key (@keys) {
-%             my $val = $field->get_meta($meta, $key);
-%             $val = ucfirst $val if $key eq 'type';
-%             $val = '&nbsp;' unless defined $val && $val ne '';
-          <td><% $val %></td>
-%         }
+          <td><% $field->get_name %></td>
+          <td><% $field->get_widget_type %></td>
+          <td><% $field->get_default_val %></td>
+          <td><% $field->get_length %></td>
           <td><% $field->get_max_length %></td>
           <td><% $field->get_required ? 'Yes' : 'No' %></td>
-%         if ($vals) {
+%         if (my $vals = $field->get_vals) {
           <td>
             <ul>
 %             for my $line (split /\n/, $vals)  {
@@ -363,9 +359,9 @@ if (my @subs = $elem_type->get_containers) {
             my $nest = $subkn eq $kn;
             next if $seen{$subkn} > 1 || ($nest && $no_nest);
             $m->comp('.element',
-                elem    => $sub,
-                level   => $level + 1,
-                no_nest => $nest
+                elem_type => $sub,
+                level     => $level + 1,
+                no_nest   => $nest
             );
         }
     }
