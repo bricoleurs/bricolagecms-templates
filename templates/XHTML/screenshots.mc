@@ -1,7 +1,14 @@
           <div id="screenshots">
-% for my $i ($next_shot .. $last_shot) {
-%     $burner->display_element($element->get_container('screenshot', $i));
-% }
+<%perl>;
+if ($next_shot == 1) {
+    # Output paragraphs on the first page.
+    $m->print('            <p>', $_->get_value, "</p>\n")
+        for $element->get_elements('paragraph');
+}
+for my $i ($next_shot .. $last_shot) {
+    $burner->display_element($element->get_container('screenshot', $i));
+}
+</%perl>\
           </div>
 % if ($prev || $next) {
           <div id="pagenav">
