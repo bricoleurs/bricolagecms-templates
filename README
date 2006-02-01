@@ -1,5 +1,5 @@
-bricolage.cc Templates & Element Types 1.21
-===========================================
+bricolage.cc Templates & Element Types 1.3
+==========================================
 
 This package contains all of the templates and element type definitions (the
 latter in XML, exported from the Bricolage SOAP server) for the bricolage.cc
