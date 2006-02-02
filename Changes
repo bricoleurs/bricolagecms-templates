@@ -1,6 +1,8 @@
 Revision history for bricolage.cc Templates & Element Types
 ===========================================================
 
+1.4
+
 1.3  2006-02-01T23:41:42
       - Fixed contributor_list.mc to properly default to sorting on full
         names.
@@ -13,8 +15,6 @@ Revision history for bricolage.cc Templates & Element Types
         making all templates safe for outputting multibyte Unicode characters,
         as well as allowing them to be executed outside of mod_perl (such as
         by bric_queued).
-      - Updated element_types.xml with new "is_media" element instead of
-        the old (and conflicting) "media" element.
       - Fixed typo in /util/archive_list.mc that would have allowed expired
         stories to be listed.
       - Now using the "published_version" parameter (available in Bricolage
@@ -23,7 +23,7 @@ Revision history for bricolage.cc Templates & Element Types
       - Now using the Schwartzian transform for more efficient sorting of
         keywords in the keyword_list.mc template.
       - Templates no longer add a trailing slash to URIs, since all URIs in
-        Bricolage and newer will include the slash.
+        Bricolage 1.10 and newer will include the slash.
       - Added paragraph field to the Screenshots element type and template.
       - Updated all templates for compatibility with Bricolage 1.10.
 
