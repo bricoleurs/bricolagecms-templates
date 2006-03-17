@@ -4,9 +4,7 @@ my $url = encode_entities($element->get_data('url'));
 my $text = $element->get_data('link_text');
 unless ($url && $text) {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("You forgot to specify a URL and/or link text for "
-                         . 'element #'. $element->get_place + 1 . ', '
-                         . $element->get_name);
+    $burner->throw_error('You forgot to specify a URL and/or link text');
 }
 my $tip = encode_entities($element->get_data('tooltip'));
 $tip = '' unless defined $tip;

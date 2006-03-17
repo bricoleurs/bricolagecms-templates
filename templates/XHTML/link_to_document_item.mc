@@ -2,17 +2,16 @@
 my $doc = $element->get_related_story;
 unless ($doc) {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("You forgot to relate a document for "
-                         . 'element #'. $element->get_place + 1 . ', '
-                         . $element->get_name);
+    $burner->throw_error('You forgot to relate a document');
 }
 
 my $desc = $element->get_data('description');
 $desc = $desc ? ": $desc" : '';
-$m->print('            <li><a href="', $burner->best_uri($doc)->as_string,
-          '" title="', encode_entities($element->get_data('tooltip') || ''),
-          '">', ($element->get_data('link_text') || $doc->get_title),
-          "</a>$desc</li>\n"
+$m->print(
+    '            <li><a href="', $burner->best_uri($doc)->as_string,
+    '" title="', encode_entities($element->get_data('tooltip') || ''),
+    '">', ($element->get_data('link_text') || $doc->get_title),
+    "</a>$desc</li>\n"
 );
 return;
 </%init>\

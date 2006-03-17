@@ -3,9 +3,7 @@ my $url = encode_entities($element->get_data('url'));
 my $title = $element->get_data('link_text');
 unless ($url && $title) {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("You forgot to specify a URL and/or title for "
-                         . 'element #' . $element->get_place + 1 . ', '
-                         . $element->get_name);
+    $burner->throw_error('You forgot to specify a URL and/or title');
 }
 my $tip = encode_entities($element->get_data('tooltip')) || '';
 my $desc = $element->get_data('description');

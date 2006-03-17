@@ -11,9 +11,7 @@ my $audio = $element->get_related_media;
 unless ($audio) {
     # Throw an error or return.
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error( 'You forgot to relate an audio file to '
-                         . 'element #'. $element->get_place + 1 . ', '
-                         . $element->get_name);
+    $burner->throw_error('You forgot to relate an audio file');
 }
 
 my $type  = $audio->get_media_type->get_name;
@@ -21,9 +19,7 @@ my $type  = $audio->get_media_type->get_name;
 unless ( $type =~ /^audio/ ) {
     # Oops, it's not a audio!
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error( 'The media document associated with element #'
-                          . $element->get_place + 1 . ', '
-                          . $element->get_name . ', is not an audio file');
+    $burner->throw_error( $audio->get_uri . ' is not an audio file');
 }
 
 my $caption = $element->get_data('caption')

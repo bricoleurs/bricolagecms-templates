@@ -2,16 +2,12 @@
 my $download = $element->get_related_media;
 unless ($download) {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("You neglected to relate a download document to "
-                         . 'element #' . $element->get_place + 1 . ', '
-                         . $element->get_name);
+    $burner->throw_error('You neglected to relate a download document');
 }
 
 unless ($download->get_element_key_name eq 'download') {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("The media document associated with "
-                         . 'element #' . $element->get_place + 1 . ', '
-                         . $element->get_name . ", is not a download file.");
+    $burner->throw_error($download->get_uri . ' is not a download file');
 }
 
 my $tip = encode_entities($element->get_data('tooltip'));
@@ -28,10 +24,10 @@ if (my $log = $element->get_related_story) {
 }
 
 unless ($log_url) {
-    $burner->throw_error("You left out the changelog URL in "
-                         . 'element #' . $element->get_place + 1 . ', '
-                         . $element->get_name)
-      unless $burner->get_mode == PUBLISH_MODE;
+    $burner->throw_error(
+        'You left out the changelog URL for '
+        . $download->get_uri
+    ) unless $burner->get_mode == PUBLISH_MODE;
     $log_url = '';
 }
 

@@ -7,9 +7,7 @@ my $shot = $element->get_related_media;
 unless ($shot) {
     # Throw an error or return.
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error( 'You forgot to relate an image to element #'
-                          . $element->get_place + 1 . ', '
-                          . $element->get_name);
+    $burner->throw_error('You forgot to relate an image');
 }
 
 my $selem = $shot->get_element;

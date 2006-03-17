@@ -9,9 +9,7 @@
 my $download = $element->get_related_media;
 unless ($download) {
     return if $burner->get_mode == PUBLISH_MODE;
-    $burner->throw_error("You neglected to relate a downloadable document to "
-                         . 'element #' . $element->get_place + 1 . ', '
-                         . $element->get_name);
+    $burner->throw_error('You neglected to relate a downloadable document');
 }
 my $tip = encode_entities($element->get_data('tooltip'));
 my $uri = $burner->best_uri($download)->as_string;
