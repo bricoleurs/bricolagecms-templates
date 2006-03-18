@@ -2,6 +2,13 @@ Revision history for bricolage.cc Templates & Element Types
 ===========================================================
 
 1.4
+      - Changed calls to 'throw_error()' in all templates so that they no
+        longer include element trace information. It never actually worked
+        properly thanks to a syntax error, and is now included in the error
+        output of Bricolage 1.10, anyway.
+      - Removed duplicate 'top_level' XML elemements from each element type
+        listed in element_types.xml.
+      - Added output_channels.xml.
 
 1.3  2006-02-01T23:41:42
       - Fixed contributor_list.mc to properly default to sorting on full

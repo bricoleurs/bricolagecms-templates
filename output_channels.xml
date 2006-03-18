@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assets xmlns="http://bricolage.sourceforge.net/assets.xsd">
+ <output_channel id="1">
+  <name>XHTML</name>
+  <description>XHTML output.</description>
+  <protocol>http://</protocol>
+  <filename>index</filename>
+  <file_ext>html</file_ext>
+  <uri_format>/%{categories}/%Y/%m/%d/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes>
+   <include site="bricolage.cc">Library</include>
+  </includes>
+  <active>1</active>
+ </output_channel>
+ <output_channel id="1024">
+  <name>Library</name>
+  <description>Library of utility templates.</description>
+  <protocol>http://</protocol>
+  <filename>index</filename>
+  <file_ext>html</file_ext>
+  <uri_format>/%{categories}/%Y/%m/%d/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes></includes>
+  <active>1</active>
+ </output_channel>
+ <output_channel id="1025">
+  <name>RSS</name>
+  <description>RSS Feed output.</description>
+  <protocol>http://</protocol>
+  <filename>rss</filename>
+  <file_ext>xml</file_ext>
+  <uri_format>/%{categories}/%Y/%m/%d/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes>
+   <include site="bricolage.cc">Library</include>
+  </includes>
+  <active>1</active>
+ </output_channel>
+ <output_channel id="1026">
+  <name>Archive</name>
+  <description>Archive page output.</description>
+  <protocol>http://</protocol>
+  <filename>index</filename>
+  <file_ext>html</file_ext>
+  <uri_format>/%{categories}/%Y/%m/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes>
+   <include site="bricolage.cc">XHTML</include>
+   <include site="bricolage.cc">Library</include>
+  </includes>
+  <active>1</active>
+ </output_channel>
+ <output_channel id="1027">
+  <name>Mason</name>
+  <description>Outputs Mason components.</description>
+  <protocol>http://</protocol>
+  <filename>mason</filename>
+  <file_ext>cmp</file_ext>
+  <uri_format>/%{categories}/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes>
+   <include site="bricolage.cc">Library</include>
+  </includes>
+  <active>1</active>
+ </output_channel>
+ <output_channel id="1028">
+  <name>Slugged XHTML</name>
+  <description>XHTML output with only the category and slug in the URI.</description>
+  <protocol></protocol>
+  <filename>index</filename>
+  <file_ext>html</file_ext>
+  <uri_format>/%{categories}/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes>
+   <include site="bricolage.cc">XHTML</include>
+   <include site="bricolage.cc">Library</include>
+  </includes>
+  <active>1</active>
+ </output_channel>
+ <output_channel id="1029">
+  <name>Introspect</name>
+  <description></description>
+  <protocol>http://</protocol>
+  <filename>index</filename>
+  <file_ext>html</file_ext>
+  <uri_format>/%{categories}/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/%{slug}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes>
+   <include site="bricolage.cc">Library</include>
+  </includes>
+  <active>1</active>
+ </output_channel>
+</assets>
+<!--
+
+Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation, version 2.1 of the License.
+
+This library is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+details.
+
+You should have received a copy of the GNU Lesser General Public License along
+with this library (see the the license.txt file); if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
+
+-->

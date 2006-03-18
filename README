@@ -1,34 +1,23 @@
 bricolage.cc Templates & Element Types 1.4
 ==========================================
 
-This package contains all of the templates and element type definitions (the
-latter in XML, exported from the Bricolage SOAP server) for the bricolage.cc
-Web site. It's not meant for direct import into an existing Bricolage server,
-although it is possible to peform such a direct import by modifying the
-Bricolage server and the "element_types.xml" file. To do so, you must set up
-the following output channels (or modify "element_types.xml" to a similar
-model):
+This package contains all of the templates, element type definitions, and
+output channel definitions (the latter two in XML, exported from the Bricolage
+SOAP server) for the bricolage.cc Web site. It's not meant for direct import
+into an existing Bricolage server, although it is possible to import the
+output channels and element types.
 
-Output Channel     Includes
------------------  ---------------
-Library
-XHTML              Library
-Slugged XHATML     XHTML, Library
-Archive            XHTML, Library
-RSS                Library
-Mason              Library
-Introspect         Library
+To do so, you must modify the site tag in element_types.xml and
+output_channels.xml. Then use bric_soap to import them into your Bricolage
+server:
 
-Then you can simply use the element_types.xml file to create these element
-types.
+  bric_soap output_channel create output_channels.xml
+  bric_soap element_type create element_types.xml
 
 To get the templates to properly execute, make sure that the PERL_LOADER
 bricolage.conf directive loads HTML::Entities and the burner mode constants:
 
   PERL_LOADER = use HTML::Entities; use Bric::Util::Burner qw(:modes);
-
-And finally, You will need to modify the site tag in element_types.xml.
-Consult the Bricolage Website and documentation for details.
 
   http://www.bricolage.cc/
 
