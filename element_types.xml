@@ -5,7 +5,6 @@
   <key_name>pull_quote</key_name>
   <name>Pull Quote</name>
   <description>A pull quote element</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -81,7 +80,6 @@ right,Right
   <key_name>faq_question</key_name>
   <name>FAQ Question</name>
   <description>A single FAQ question and its answer.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -158,7 +156,6 @@ right,Right
   <key_name>faq_section</key_name>
   <name>FAQ Section</name>
   <description>A section of an FAQ.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -196,7 +193,6 @@ right,Right
   <key_name>link_to_download</key_name>
   <name>Link to Download</name>
   <description>Link to a file to download.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -289,7 +285,6 @@ right,Right
   <key_name>link_to_screenshot_image</key_name>
   <name>Link to Screenshot Image</name>
   <description>A link to an image used in a screenshot.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -330,7 +325,6 @@ pdf,PDF
   <key_name>nav_link</key_name>
   <name>Nav Link</name>
   <description>Link to a document used for the site nav bar.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -385,7 +379,6 @@ pdf,PDF
   <key_name>external_nav_link</key_name>
   <name>External Nav Link</name>
   <description>Link to an external URL used in the nav bar.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -459,7 +452,6 @@ pdf,PDF
   <key_name>nav_menu_item</key_name>
   <name>Nav Menu Item</name>
   <description>A single nav menu and its submenus.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -518,7 +510,6 @@ pdf,PDF
   <key_name>list</key_name>
   <name>List</name>
   <description>An ordered or unordered list.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -636,7 +627,6 @@ ol,Ordered
   <key_name>related_audio</key_name>
   <name>Related Audio</name>
   <description>Relates an audio file to the document.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -750,7 +740,6 @@ right,Right
   <key_name>related_image</key_name>
   <name>Related Image</name>
   <description>Relates an image to the document.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -845,7 +834,6 @@ right,Right
   <key_name>related_links</key_name>
   <name>Related Links</name>
   <description>Links to related stories.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -884,7 +872,6 @@ right,Right
   <key_name>screenshot</key_name>
   <name>Screenshot</name>
   <description>A screenshot.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -979,7 +966,6 @@ right,Right
   <key_name>archive</key_name>
   <name>Archive</name>
   <description>Archive of all stories on the site or in a category and all of its subcategories.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1004,7 +990,6 @@ right,Right
   <key_name>downloads</key_name>
   <name>Downloads</name>
   <description>The site downloads page.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1087,7 +1072,6 @@ right,Right
   <key_name>faq</key_name>
   <name>FAQ</name>
   <description>Frequently asked questions.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1112,7 +1096,6 @@ right,Right
   <key_name>home_page</key_name>
   <name>Home Page</name>
   <description>Site home page.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1196,7 +1179,6 @@ right,Right
   <key_name>screenshots</key_name>
   <name>Screenshots</name>
   <description>Screenshots.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1241,7 +1223,6 @@ right,Right
   <key_name>fixed_document</key_name>
   <name>Fixed Document</name>
   <description>Fixed location document.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1370,7 +1351,6 @@ right,Right
   <key_name>article</key_name>
   <name>Article</name>
   <description>Dated article.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -1516,7 +1496,6 @@ right,Right
   <key_name>nav_menu</key_name>
   <name>Nav Menu</name>
   <description>Site navigation menu.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -1543,7 +1522,6 @@ right,Right
   <key_name>image</key_name>
   <name>Image</name>
   <description>An image file.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -1680,7 +1658,6 @@ right,Right
   <key_name>fixed_image</key_name>
   <name>Fixed Image</name>
   <description>Fixed location image file.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1817,7 +1794,6 @@ right,Right
   <key_name>static_file</key_name>
   <name>Static File</name>
   <description>CSS, JavaScript, SSI, etc.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -1839,7 +1815,6 @@ right,Right
   <key_name>audio</key_name>
   <name>Audio</name>
   <description>Audio file.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -1861,7 +1836,6 @@ right,Right
   <key_name>download_shortcut</key_name>
   <name>Download Shortcut</name>
   <description>A simple link to a downloadable file.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -1935,7 +1909,6 @@ right,Right
   <key_name>download_branch</key_name>
   <name>Download Branch</name>
   <description>A download branch, with links to all the releases in the branch.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -1973,7 +1946,6 @@ right,Right
   <key_name>related_document_link</key_name>
   <name>Related Document Link</name>
   <description>Link to a story document related to the current document.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -2047,7 +2019,6 @@ right,Right
   <key_name>related_external_link</key_name>
   <name>Related External Link</name>
   <description>Link to an external URL that's related to the current document.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2140,7 +2111,6 @@ right,Right
   <key_name>personal_profile</key_name>
   <name>Personal Profile</name>
   <description>The profile of data about a person, such as a Bricolage developer.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2309,7 +2279,6 @@ right,Right
   <key_name>roster</key_name>
   <name>Roster</name>
   <description>List of personal profiles of people involved in the project.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -2334,7 +2303,6 @@ right,Right
   <key_name>site_profile</key_name>
   <name>Site Profile</name>
   <description>The profile of a site powered by Bricolage</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2408,7 +2376,6 @@ right,Right
   <key_name>sites</key_name>
   <name>Sites</name>
   <description>List of sites powered by Bricolage</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -2491,7 +2458,6 @@ right,Right
   <key_name>mailing_list</key_name>
   <name>Mailing List</name>
   <description>Information about a mailing list</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2584,7 +2550,6 @@ right,Right
   <key_name>mailing_lists</key_name>
   <name>Mailing Lists</name>
   <description>A list of mailing lists.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -2667,7 +2632,6 @@ right,Right
   <key_name>download</key_name>
   <name>Download</name>
   <description>Downloadable files, such as a release of Bricolage.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -2689,7 +2653,6 @@ right,Right
   <key_name>changes</key_name>
   <name>Changes</name>
   <description>List of changes in a Bricolage release.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2773,7 +2736,6 @@ right,Right
   <key_name>link_to_document_item</key_name>
   <name>Link to Document Item</name>
   <description>List item link to another Bricolage document.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -2847,7 +2809,6 @@ right,Right
   <key_name>external_link_item</key_name>
   <name>External Link Item</name>
   <description>List item link to a URL not managed in Bricolage.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2940,7 +2901,6 @@ right,Right
   <key_name>block_quote</key_name>
   <name>Block Quote</name>
   <description>Inline extended quotation.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -2995,7 +2955,6 @@ right,Right
   <key_name>external_link_button</key_name>
   <name>External Link Button</name>
   <description>An image that links to URL.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>0</related_story>
@@ -3090,7 +3049,6 @@ right,Right
   <key_name>related_document_button</key_name>
   <name>Related Document Button</name>
   <description>Outputs an image as link to another document.</description>
-  <top_level>0</top_level>
   <paginated>0</paginated>
   <fixed_uri>0</fixed_uri>
   <related_story>1</related_story>
@@ -3166,7 +3124,6 @@ right,Right
   <key_name>document_models</key_name>
   <name>Document Models</name>
   <description>For the creation of a list of document models.</description>
-  <top_level>1</top_level>
   <paginated>0</paginated>
   <fixed_uri>1</fixed_uri>
   <related_story>0</related_story>
@@ -3206,3 +3163,22 @@ right,Right
   </field_types>
  </element_type>
 </assets>
+<!--
+
+Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation, version 2.1 of the License.
+
+This library is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+details.
+
+You should have received a copy of the GNU Lesser General Public License along
+with this library (see the the license.txt file); if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA.
+
+-->
