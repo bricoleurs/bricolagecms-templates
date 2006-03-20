@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assets xmlns="http://bricolage.sourceforge.net/assets.xsd">
+ <category id="1053">
+  <site>bricolage.cc</site>
+  <name>Utility Templates</name>
+  <description></description>
+  <path>/util/</path>
+  <active>1</active>
+  <adstring></adstring>
+  <adstring2></adstring2>
+  <keywords></keywords>
+ </category>
+ <category id="1054">
+  <site>bricolage.cc</site>
+  <name>Text Utility Templates</name>
+  <description></description>
+  <path>/util/text/</path>
+  <active>1</active>
+  <adstring></adstring>
+  <adstring2></adstring2>
+  <keywords></keywords>
+ </category>
+ <category id="1055">
+  <site>bricolage.cc</site>
+  <name>XHTML Utility Templates</name>
+  <description></description>
+  <path>/util/xhtml/</path>
+  <active>1</active>
+  <adstring></adstring>
+  <adstring2></adstring2>
+  <keywords></keywords>
+ </category>
+ <category id="1056">
+  <site>bricolage.cc</site>
+  <name>XML Utility Templates</name>
+  <description></description>
+  <path>/util/xml/</path>
+  <active>1</active>
+  <adstring></adstring>
+  <adstring2></adstring2>
+  <keywords></keywords>
+ </category>
+</assets>

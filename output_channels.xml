@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <assets xmlns="http://bricolage.sourceforge.net/assets.xsd">
+ <output_channel id="1024">
+  <name>Library</name>
+  <description>Library of utility templates.</description>
+  <protocol>http://</protocol>
+  <filename>index</filename>
+  <file_ext>html</file_ext>
+  <uri_format>/%{categories}/%Y/%m/%d/%{slug}/</uri_format>
+  <fixed_uri_format>/%{categories}/</fixed_uri_format>
+  <uri_case>Lowercase</uri_case>
+  <use_slug>0</use_slug>
+  <burner>Mason</burner>
+  <site>bricolage.cc</site>
+  <includes></includes>
+  <active>1</active>
+ </output_channel>
  <output_channel id="1">
   <name>XHTML</name>
   <description>XHTML output.</description>
@@ -16,21 +31,6 @@
   <includes>
    <include site="bricolage.cc">Library</include>
   </includes>
-  <active>1</active>
- </output_channel>
- <output_channel id="1024">
-  <name>Library</name>
-  <description>Library of utility templates.</description>
-  <protocol>http://</protocol>
-  <filename>index</filename>
-  <file_ext>html</file_ext>
-  <uri_format>/%{categories}/%Y/%m/%d/%{slug}/</uri_format>
-  <fixed_uri_format>/%{categories}/</fixed_uri_format>
-  <uri_case>Lowercase</uri_case>
-  <use_slug>0</use_slug>
-  <burner>Mason</burner>
-  <site>bricolage.cc</site>
-  <includes></includes>
   <active>1</active>
  </output_channel>
  <output_channel id="1025">

@@ -11,6 +11,12 @@ To do so, you must modify the site tag in element_types.xml and
 output_channels.xml. Then use bric_soap to import them into your Bricolage
 server:
 
+  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' site update sites.xml
+  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' output_channel create output_channels.xml
+  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' element_type update pull_quote.xml
+  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' element_type create element_types.xml
+  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' category create categories.xml
+
   bric_soap output_channel create output_channels.xml
   bric_soap element_type create element_types.xml
 

@@ -9,6 +9,11 @@ Revision history for bricolage.cc Templates & Element Types
       - Removed duplicate 'top_level' XML elemements from each element type
         listed in element_types.xml.
       - Added output_channels.xml.
+      - Moved the pull quote element type definition to pull_quote.xml, since
+        Bricolage comes with a pull quote element by default, and so it is
+        best updated.
+      - Added sites.xml to update the default site, categories.xml to create
+        the utility categories and templates.xml to create the templates.
 
 1.3  2006-02-01T23:41:42
       - Fixed contributor_list.mc to properly default to sorting on full
