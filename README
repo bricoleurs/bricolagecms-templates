@@ -1,31 +1,36 @@
 bricolage.cc Templates & Element Types 1.4
 ==========================================
 
-This package contains all of the templates, element type definitions, and
-output channel definitions (the latter two in XML, exported from the Bricolage
-SOAP server) for the bricolage.cc Web site. It's not meant for direct import
-into an existing Bricolage server, although it is possible to import the
-output channels and element types.
+This package contains all of the element types, output channels, utility
+categories, sites, and templates used to create the bricolage.cc Web site in
+Bricolage. If you're just interested in the templates, browse in templates/,
+where they are all divided up by output channel. But if you have a brand
+spankin' new install of Bricolage, you can import all of these objects into it
+using `bric_soap`. Here's how:
 
-To do so, you must modify the site tag in element_types.xml and
-output_channels.xml. Then use bric_soap to import them into your Bricolage
-server:
-
-  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' site update sites.xml
-  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' output_channel create output_channels.xml
-  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' element_type update pull_quote.xml
-  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' element_type create element_types.xml
-  /usr/local/bricolage/bin/bric_soap --username admin --password 'change me now!' category create categories.xml
-
-  bric_soap output_channel create output_channels.xml
-  bric_soap element_type create element_types.xml
+  bric_soap --username admin --password 'change me now!' site update \
+    xml/sites.xml
+  bric_soap --username admin --password 'change me now!' output_channel \
+    create xml/output_channels.xml
+  bric_soap --username admin --password 'change me now!' element_type update \
+    xml/pull_quote.xml
+  bric_soap --username admin --password 'change me now!' element_type create \
+    xml/element_types.xml
+  bric_soap --username admin --password 'change me now!' category create \
+    xml/categories.xml
+  bric_soap --username admin --password 'change me now!' template create \
+    xml/templates.xml
 
 To get the templates to properly execute, make sure that the PERL_LOADER
 bricolage.conf directive loads HTML::Entities and the burner mode constants:
 
   PERL_LOADER = use HTML::Entities; use Bric::Util::Burner qw(:modes);
 
-  http://www.bricolage.cc/
+Even still, previews likely won't work properly, as the Bricolage Web site
+uses Mason on its front-end to assemble pages, and a bunch of Mason components
+and style sheets are necessary to make it all work. But at least this will
+help get you started. It might be simplest to skip creating the templqtes and
+just browse them in 'templates/' and create them as you need them.
 
 Copyright & License
 -------------------
