@@ -1,8 +1,8 @@
           <div id="sidebar">
 <% "<& /ui/ssi/search.cmp &>\\" %>
 <%perl>;
-if (my $download_shortcut = $element->get_container('download_shortcut')) {
-    $burner->display_element($download_shortcut);
+if (my @download_shortcuts = $element->get_elements('download_shortcut')) {
+    $burner->display_element($_) for @download_shortcuts;
 }
 if (my $links = $element->get_container('related_links')) {
     $burner->display_element($links);
