@@ -4,6 +4,8 @@ Revision history for bricolage.cc Templates & Element Types
 1.5
       - Added paragraph tags to the description element for each story in RSS
         output.
+      - Updated sidebar template to output all download shortcut elements,
+        rather than just one.
 
 1.4   2006-03-20T21:06:16
       - Changed calls to 'throw_error()' in all templates so that they no
@@ -87,7 +89,7 @@ Revision history for bricolage.cc Templates & Element Types
       - Added Introspection output channel and templates.
       - Added "Document Models" document type.
       - Added "Download Shortcut" subelement to the "Changes" document, so
-        that there can be a clear link to the download descibed by the
+        that there can be a clear link to the download described by the
         changes.
 
 1.00  2004-07-28T20:13:54
