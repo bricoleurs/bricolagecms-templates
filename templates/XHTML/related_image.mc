@@ -32,7 +32,7 @@ my $alt = encode_entities($element->get_data('alt_text') || '');
 
 =head1 Name
 
-/related_image.mc - XHTML output for related images on bricolage.cc
+/related_image.mc - XHTML output for related images on the Bricolage CMS site
 
 =head1 Author
 
@@ -40,7 +40,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

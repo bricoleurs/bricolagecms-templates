@@ -49,7 +49,7 @@ $m->print("</li>\n") if $in_item;
 
 =head1 Name
 
-/list.mc - XHTML output for lists on bricolage.cc
+/list.mc - XHTML output for lists on the Bricolage CMS site
 
 =head1 Author
 
@@ -57,7 +57,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

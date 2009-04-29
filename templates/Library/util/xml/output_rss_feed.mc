@@ -9,25 +9,25 @@
  xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
  xmlns:admin="http://webns.net/mvcb/"
 >
-  <channel rdf:about="http://www.bricolage.cc<% $story->get_primary_uri %>">
+  <channel rdf:about="http://www.bricolagecms.org<% $story->get_primary_uri %>">
     <title><![CDATA[<% $story->get_title %>]]></title>
     <link><% $story->get_uri %></link>
     <description><![CDATA[<%  $story->get_description || $story->get_title %>]]></description>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/2.0" />
     <dc:language>en-us</dc:language>
     <dc:rights>Copyright <% Bric::Util::Time::strfdate(time, '%Y', 1) %> Bricolage Developers</dc:rights>
-    <dc:publisher>www@bricolage.cc</dc:publisher>
-    <dc:creator>www@bricolage.cc</dc:creator>
+    <dc:publisher>www@bricolagecms.org</dc:publisher>
+    <dc:creator>www@bricolagecms.org</dc:creator>
     <items>
       <rdf:Seq>
 % for my $doc (@docs) {
-        <rdf:li rdf:resource="http://www.bricolage.cc<% $doc->get_primary_uri %>" />
+        <rdf:li rdf:resource="http://www.bricolagecms.org<% $doc->get_primary_uri %>" />
 % }
       </rdf:Seq>
     </items>
   </channel>
 % for my $doc (@docs) {
-%     my $url = 'http://www.bricolage.cc' . $doc->get_primary_uri;
+%     my $url = 'http://www.bricolagecms.org' . $doc->get_primary_uri;
 %     my $elem = $doc->get_element;
 %     my $title = $doc->get_title;
 %     # Damn RSS readers don't recognize XHTML in the title. Convert <q> and
@@ -61,7 +61,7 @@ $title => undef
 
 =head1 Name
 
-/util/xml/output_rss_feed.mc - Outputs an RSS feed for a list of documents on bricolage.cc
+/util/xml/output_rss_feed.mc - Outputs an RSS feed for a list of documents on the Bricolage CMS site
 
 =head1 Author
 
@@ -69,7 +69,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

@@ -17,7 +17,7 @@ $date => undef
 
 =head1 Name
 
-/util/xhtml/output_link.mc - Outputs a definition list link for XHTML output for bricolage.cc
+/util/xhtml/output_link.mc - Outputs a definition list link for XHTML output for the Bricolage CMS site
 
 =head1 Author
 
@@ -25,7 +25,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

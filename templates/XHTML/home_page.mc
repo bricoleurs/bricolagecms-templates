@@ -5,7 +5,7 @@
 
 =head1 Name
 
-/home_page.mc - XHTML output for the bricolage.cc home page
+/home_page.mc - XHTML output for the Bricolage CMS site home page
 
 =head1 Author
 
@@ -13,7 +13,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

@@ -39,7 +39,7 @@ $burner->publish_another($_) for @archives;
 
 =head1 Name
 
-/article.mc - XHTML output for bricolage.cc articles
+/article.mc - XHTML output for Bricolage CMS site articles
 
 =head1 Author
 
@@ -47,7 +47,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

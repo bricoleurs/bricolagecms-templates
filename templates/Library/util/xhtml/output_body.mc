@@ -28,7 +28,7 @@ my @elems = qw(paragraph list header subheader code pull_quote related_image
 
 =head1 Name
 
-/util/xhtml/output_body.mc - Outputs the body of most XHTML documents for bricolage.cc
+/util/xhtml/output_body.mc - Outputs the body of most XHTML documents for the Bricolage CMS site
 
 =head1 Author
 
@@ -36,7 +36,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

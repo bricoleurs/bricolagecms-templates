@@ -20,7 +20,7 @@ return;
 
 =head1 Name
 
-/mailing_lists.mc - XHTML output for lists of mailing lists on bricolage.cc
+/mailing_lists.mc - XHTML output for lists of mailing lists on the Bricolage CMS site
 
 =head1 Author
 
@@ -28,7 +28,7 @@ Marshall Roch <mashall@exclupen.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

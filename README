@@ -1,8 +1,8 @@
-bricolage.cc Templates & Element Types 1.5
-==========================================
+Bricolage CMS site Templates & Element Types 1.5
+================================================
 
 This package contains all of the element types, output channels, utility
-categories, sites, and templates used to create the bricolage.cc Web site in
+categories, sites, and templates used to create the Bricolage Web site in
 Bricolage. If you're just interested in the templates, browse in templates/,
 where they are all divided up by output channel. But if you have a brand
 spankin' new install of Bricolage, you can import all of these objects into it
@@ -34,7 +34,7 @@ just browse them in 'templates/' and create them as you need them.
 
 Copyright & License
 -------------------
-Copyright (c) 2004-2006 by David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 by David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

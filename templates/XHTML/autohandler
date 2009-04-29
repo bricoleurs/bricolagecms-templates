@@ -26,7 +26,7 @@
 </html>
 <%init>;
 my $title = $story->get_primary_uri eq '/'
-  ? 'Welcome to Bricolage.cc'
+  ? 'Welcome to Bricolage CMS'
   : 'Bricolage -- ' . $story->get_title;
 # Convert <q> tags in title.
 $title =~ s|</q>|&#x201d;|g
@@ -35,7 +35,7 @@ $title =~ s|</q>|&#x201d;|g
 $title =~ s|</?[^>]+>||g;
 </%init>\
 <%method .rss>
-    <link rel="alternate" type="application/rss+xml" title="bricolage.cc RSS Feed" href="/archive/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Bricolage CMS RSS Feed" href="/archive/rss.xml" />
 </%method>\
 <%filter>;
 s/([\s\n])'/$1&#x2018;/g; # Make opening single quotation marks.
@@ -48,7 +48,7 @@ s/(?<!\<\!)--(?!>)/&#x2014;/g; # Make proper m-dashes, but allow comments.
 
 =head1 Name
 
-/autohandler - Root category template for bricolage.cc XHTML output
+/autohandler - Root category template for XHTML output on the Briclage CMS site
 
 =head1 Author
 
@@ -56,7 +56,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

@@ -36,7 +36,7 @@ my $pos = $element->get_data('position') || 'left';
 
 =head1 Name
 
-/external_link_button.mc - XHTML output for external link buttons on bricolage.cc
+/external_link_button.mc - XHTML output for external link buttons on the Bricolage CMS site
 
 =head1 Author
 
@@ -44,7 +44,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

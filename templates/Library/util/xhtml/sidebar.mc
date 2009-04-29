@@ -17,7 +17,7 @@ if (my $links = $element->get_container('related_links')) {
 
 =head1 Name
 
-/util/xhtml/sidbar.mc - Outputs the code to load the sidebar in documents on bricolage.cc
+/util/xhtml/sidbar.mc - Outputs the code to load the sidebar in documents on The Bricolage CMS site
 
 =head1 Author
 
@@ -25,7 +25,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright & License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free

@@ -16,7 +16,7 @@ introspect.mc - Outputs a graphical representation of a story type element tree
 
 This template outputs a graphical representation of the element type structure
 of a story type element. To see examples of its output, visit
-L<http://www.bricolage.cc/about/doc_models/> on the Bricolage Website.
+L<http://www.bricolagecms.org/about/doc_models/> on the Bricolage Website.
 
 To use this template, simply create a template for your story element type,
 have it execute this template, and you're done. Create a new document for the
@@ -75,7 +75,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2004-2006 David Wheeler & Kineticode. All rights reserved.
+Copyright (c) 2004-2009 David Wheeler & Kineticode. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
